@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIKASU(アイカス)| 月3万円〜部分的な人事業務をカスタマイズして委託</title>
+<meta name="description" content="採用課題の診断から、実務、改善、仕組み化まで。応募者対応・スカウト・面接調整・エージェント対応など、必要な採用業務だけを短期間・部分的に依頼できるRPOサービスAIKASU。九州の新卒・地方採用にも対応。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AIKASU(アイカス)| 月3万円〜部分的な人事業務をカスタマイズして委託">
+<meta property="og:description" content="採用課題の診断から実務・改善・仕組み化まで。必要な採用業務だけを、必要な期間だけ依頼できるRPOサービス。">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/aikasu-logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "採用代行(RPO)サービス",
+  "provider": {
+    "@type": "Organization",
+    "name": "AIKASU"
+  },
+  "areaServed": "JP",
+  "description": "採用課題の診断から実務・改善・仕組み化までを、必要な業務・期間だけ提供するRPOサービス"
+}
+</script>
+<style>
+  :root{
+    --white:#ffffff;
+    --blue-50:#f2f8fd;
+    --blue-100:#e3f1fb;
+    --blue-200:#cde6f8;
+    --blue-400:#8fc4ea;
+    --blue-500:#4fa8db;
+    --blue-600:#2f8fc7;
+    --accent:#1fb6a6;
+    --slate-100:#eef2f5;
+    --slate-300:#c7d1d8;
+    --text-main:#26333d;
+    --text-sub:#5b6b76;
+    --navy:#1f3a4d;
+    --radius-lg:20px;
+    --radius-md:14px;
+    --radius-sm:8px;
+    --shadow:0 2px 14px rgba(31,58,77,0.06);
+    --max:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
+  body{
+    margin:0;
+    overflow-x:hidden;
+    max-width:100vw;
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:var(--text-main);
+    background:var(--white);
+    line-height:1.8;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    word-break:keep-all;
+    overflow-wrap:anywhere;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  section{padding:88px 0;}
+  @media (max-width:768px){ section{padding:56px 0;} }
+
+  h1,h2,h3,h4{margin:0;line-height:1.5;color:var(--navy);}
+  .eyebrow{
+    display:inline-block;font-size:13px;font-weight:700;color:var(--blue-600);
+    background:var(--blue-100);padding:5px 14px;border-radius:99px;letter-spacing:.03em;margin-bottom:16px;
+  }
+  .section-title{font-size:clamp(22px,3.4vw,32px);font-weight:700;margin-bottom:14px;}
+  .section-lead{color:var(--text-sub);font-size:16px;max-width:640px;margin:0 auto;}
+  .section-head{text-align:center;margin-bottom:48px;}
+  .section-head.left{text-align:left;margin-left:0;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+    backdrop-filter:blur(6px);border-bottom:1px solid var(--slate-100);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:var(--max);margin:0 auto;}
+  .logo{font-size:20px;font-weight:800;color:var(--navy);letter-spacing:.02em;display:flex;align-items:center;}
+  .logo span{color:var(--blue-600);}
+  .logo img{height:26px;width:auto;display:block;}
+  .footer-logo img{height:24px;width:auto;display:block;filter:brightness(0) invert(1);}
+  .footer-logo{display:flex;align-items:center;gap:8px;}
+  nav.links{display:flex;gap:28px;font-size:14px;font-weight:600;color:var(--text-sub);}
+  nav.links a:hover{color:var(--blue-600);}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 26px;border-radius:99px;font-weight:700;font-size:15px;
+    cursor:pointer;border:none;transition:transform .15s ease,box-shadow .15s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--blue-600);color:#fff;box-shadow:0 6px 18px rgba(47,143,199,.28);}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(47,143,199,.36);}
+  .btn-outline{background:#fff;color:var(--blue-600);border:1.5px solid var(--blue-400);}
+  .btn-outline:hover{background:var(--blue-50);}
+  .btn-sm{padding:9px 18px;font-size:13px;}
+  .header-cta{display:flex;align-items:center;gap:10px;}
+  .header-cta .btn-outline{display:none;}
+  @media (min-width:900px){.header-cta .btn-outline{display:inline-flex;}}
+  nav.links{display:none;}
+  @media (min-width:900px){nav.links{display:flex;}}
+
+  /* Hero */
+  .hero{padding:64px 0 80px;background:linear-gradient(180deg,var(--blue-50) 0%,#fff 100%);}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center;}
+  @media (min-width:960px){.hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr);}}
+  .hero h1{font-size:clamp(28px,4.6vw,44px);font-weight:800;letter-spacing:.01em;}
+  .hero h1 .hl{color:var(--blue-600);}
+  .hero-sub{margin-top:20px;font-size:16.5px;color:var(--text-sub);max-width:520px;}
+  .hero-note{margin-top:10px;font-size:14px;color:var(--text-sub);}
+  .hero-feats{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 30px;}
+  .feat-chip{
+    background:#fff;border:1px solid var(--blue-200);color:var(--navy);
+    font-size:13px;font-weight:600;padding:8px 14px;border-radius:99px;
+    display:flex;align-items:center;gap:6px;
+  }
+  .feat-chip::before{content:"✓";color:var(--accent);font-weight:800;}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;}
+
+  /* Hero diagram */
+  .hero-diagram{position:relative;aspect-ratio:1/1;width:100%;max-width:460px;margin:0 auto;}
+  .hd-center{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:132px;height:132px;border-radius:50%;background:var(--navy);color:#fff;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    font-size:13px;font-weight:700;text-align:center;box-shadow:0 10px 28px rgba(31,58,77,.28);z-index:3;
+  }
+  .hd-ring{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    border:1.5px dashed var(--blue-300,#bfe0f4);border-radius:50%;
+  }
+  .hd-orbit{width:100%;height:100%;border:1.5px dashed var(--blue-200);border-radius:50%;position:absolute;top:0;left:0;}
+  .hd-node{
+    position:absolute;background:#fff;border:1px solid var(--blue-200);border-radius:14px;
+    padding:9px 12px;font-size:12.5px;font-weight:700;color:var(--navy);box-shadow:var(--shadow);
+    display:flex;align-items:center;gap:6px;white-space:nowrap;z-index:2;
+  }
+  .hd-node .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);}
+  .hd-support{
+    position:absolute;inset:0;border-radius:50%;
+    background:conic-gradient(from -40deg, rgba(79,168,219,.16), rgba(79,168,219,0) 70%);
+    z-index:1;
+  }
+
+  /* Pain points */
+  .pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  @media (min-width:720px){.pain-grid{grid-template-columns:repeat(4,1fr);}}
+  .pain-card{
+    background:var(--blue-50);border-radius:var(--radius-md);padding:22px 18px;
+    font-size:14.5px;font-weight:600;color:var(--navy);
+  }
+  .pain-card .num{display:block;font-size:12px;color:var(--blue-600);font-weight:800;margin-bottom:8px;}
+  .pain-close{text-align:center;margin-top:40px;font-size:16px;color:var(--text-sub);max-width:600px;margin-left:auto;margin-right:auto;}
+  .pain-close strong{color:var(--navy);}
+
+  /* Flow (problem structure) */
+  .flow-row{display:flex;flex-direction:column;gap:0;}
+  @media (min-width:860px){.flow-row{flex-direction:row;align-items:stretch;}}
+  .flow-step{
+    flex:1;background:#fff;border:1px solid var(--slate-100);border-radius:var(--radius-md);
+    padding:22px 20px;position:relative;box-shadow:var(--shadow);
+  }
+  .flow-step .fnum{
+    width:30px;height:30px;border-radius:50%;background:var(--blue-600);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-bottom:12px;
+  }
+  .flow-step h4{font-size:15px;margin-bottom:6px;}
+  .flow-step p{font-size:13.5px;color:var(--text-sub);margin:0;}
+  .flow-arrow{
+    display:flex;align-items:center;justify-content:center;color:var(--blue-400);
+    font-size:20px;font-weight:800;padding:6px 0;
+    transform:rotate(90deg);
+  }
+  @media (min-width:860px){.flow-arrow{padding:0 6px;transform:none;}}
+  .flow-conclusion{
+    margin-top:36px;background:var(--navy);color:#fff;border-radius:var(--radius-md);
+    padding:26px 28px;font-size:16px;text-align:center;
+  }
+
+  /* Compare table */
+  .table-wrap{overflow-x:auto;border-radius:var(--radius-md);border:1px solid var(--slate-100);}
+  table{width:100%;border-collapse:collapse;min-width:640px;font-size:14px;}
+  th,td{padding:14px 16px;border-bottom:1px solid var(--slate-100);text-align:left;vertical-align:top;}
+  thead th{background:var(--blue-50);color:var(--navy);font-weight:700;font-size:13.5px;}
+  tbody tr:last-child td{border-bottom:none;}
+  td.ok{color:var(--accent);font-weight:800;}
+  .compare-note{display:grid;grid-template-columns:1fr;gap:16px;margin-top:28px;}
+  @media (min-width:720px){.compare-note{grid-template-columns:1fr 1fr;}}
+  .note-card{background:var(--blue-50);border-radius:var(--radius-md);padding:22px;}
+  .note-card h4{font-size:15px;margin-bottom:10px;}
+  .note-card ul{margin:0;padding-left:18px;color:var(--text-sub);font-size:14px;}
+  .note-card li{margin-bottom:6px;}
+
+  /* Process row (10 functions) */
+  .proc-row{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:8px;}
+  @media (min-width:640px){.proc-row{grid-template-columns:repeat(3,1fr);}}
+  @media (min-width:900px){.proc-row{grid-template-columns:repeat(5,1fr);}}
+  .proc-chip{
+    background:#fff;border:1.5px solid var(--blue-200);border-radius:var(--radius-sm);
+    padding:9px 16px;font-size:13.5px;font-weight:700;color:var(--navy);
+    display:flex;align-items:center;gap:7px;justify-content:flex-start;
+  }
+  .proc-chip .box{width:14px;height:14px;border:2px solid var(--blue-500);border-radius:4px;flex:none;}
+  .proc-note{text-align:center;color:var(--text-sub);font-size:14px;margin-top:20px;}
+
+  /* Menu cards */
+  .menu-grid{display:grid;grid-template-columns:1fr;gap:20px;}
+  @media (min-width:720px){.menu-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (min-width:1040px){.menu-grid{grid-template-columns:repeat(3,1fr);}}
+  .menu-card{
+    background:#fff;border:1px solid var(--slate-100);border-radius:var(--radius-lg);
+    padding:26px;box-shadow:var(--shadow);
+  }
+  .menu-card .icon{
+    width:44px;height:44px;border-radius:12px;background:var(--blue-100);
+    display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--blue-600);font-size:20px;
+  }
+  .menu-card h4{font-size:16.5px;margin-bottom:6px;}
+  .menu-card p{font-size:13.5px;color:var(--text-sub);margin:0 0 14px;}
+  .menu-card ul{margin:0;padding-left:0;list-style:none;font-size:13.5px;color:var(--navy);}
+  .menu-card li{padding:6px 0;border-top:1px dashed var(--slate-300);display:flex;gap:8px;}
+  .menu-card li:first-child{border-top:none;}
+  .menu-card li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);margin-top:8px;flex:none;}
+
+  /* Role split */
+  .role-grid{display:grid;grid-template-columns:1fr;gap:20px;}
+  @media (min-width:800px){.role-grid{grid-template-columns:1fr auto 1fr;align-items:stretch;}}
+  .role-card{background:#fff;border-radius:var(--radius-lg);padding:30px;box-shadow:var(--shadow);}
+  .role-card.you{border-top:4px solid var(--accent);}
+  .role-card.us{border-top:4px solid var(--blue-500);background:var(--blue-50);}
+  .role-card h4{font-size:17px;margin-bottom:14px;}
+  .role-card ul{margin:0;padding-left:20px;font-size:14.5px;color:var(--text-sub);}
+  .role-card li{margin-bottom:8px;}
+  .role-vs{
+    display:flex;align-items:center;justify-content:center;color:var(--blue-400);
+    font-weight:800;font-size:15px;
+  }
+
+  /* KPI table */
+  .kpi-table td:first-child{font-weight:700;color:var(--navy);}
+  .kpi-table td:last-child{color:var(--blue-600);font-weight:700;}
+
+  /* Model steps */
+  .model-list{display:flex;flex-direction:column;gap:0;max-width:760px;margin:0 auto;}
+  .model-item{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--slate-100);}
+  .model-item:last-child{border-bottom:none;}
+  .model-badge{
+    flex:none;width:46px;height:46px;border-radius:50%;background:var(--blue-600);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;
+  }
+  .model-body h4{font-size:16px;margin-bottom:4px;}
+  .model-body p{margin:0;color:var(--text-sub);font-size:14px;}
+
+  /* Kyushu */
+  .kyushu-wrap{display:grid;grid-template-columns:1fr;gap:32px;}
+  @media (min-width:900px){.kyushu-wrap{grid-template-columns:1fr 1fr;align-items:center;}}
+  .kyushu-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .kyushu-item{
+    background:#fff;border:1px solid var(--slate-100);border-radius:var(--radius-sm);
+    padding:14px 14px;font-size:13.5px;font-weight:600;color:var(--navy);display:flex;gap:8px;align-items:flex-start;
+  }
+  .kyushu-item .dot2{color:var(--blue-500);font-weight:900;}
+  .kyushu-visual{
+    background:var(--blue-50);border-radius:var(--radius-lg);padding:32px;text-align:center;
+  }
+  .kyushu-visual .big{font-size:15px;color:var(--navy);font-weight:700;margin-bottom:10px;}
+  .kyushu-visual .small{font-size:13.5px;color:var(--text-sub);}
+
+  /* Case study */
+  .case-card{
+    background:#fff;border:1px solid var(--slate-100);border-radius:var(--radius-lg);
+    padding:0;overflow:hidden;box-shadow:var(--shadow);max-width:820px;margin:0 auto;
+  }
+  .case-tag{background:var(--blue-100);color:var(--blue-600);font-size:12.5px;font-weight:800;padding:6px 16px;display:inline-block;margin:20px 0 0 24px;border-radius:99px;}
+  .case-title{padding:14px 24px 20px;font-size:18px;font-weight:700;color:var(--navy);}
+  .case-body{display:grid;grid-template-columns:1fr;border-top:1px solid var(--slate-100);}
+  @media (min-width:680px){.case-body{grid-template-columns:1fr 1fr;}}
+  .case-col{padding:22px 24px;font-size:14px;}
+  .case-col:first-child{border-bottom:1px solid var(--slate-100);}
+  @media (min-width:680px){.case-col:first-child{border-bottom:none;border-right:1px solid var(--slate-100);}}
+  .case-col h5{font-size:13.5px;color:var(--blue-600);margin-bottom:10px;letter-spacing:.02em;}
+  .case-col ul{margin:0;padding-left:18px;color:var(--text-sub);}
+  .case-col li{margin-bottom:6px;}
+  .case-footer{background:var(--blue-50);padding:16px 24px;font-size:13px;color:var(--text-sub);}
+
+  /* Assets checklist */
+  .asset-grid{display:grid;grid-template-columns:1fr;gap:10px;max-width:760px;margin:0 auto;}
+  @media (min-width:640px){.asset-grid{grid-template-columns:1fr 1fr;}}
+  .asset-item{
+    display:flex;align-items:center;gap:10px;background:var(--blue-50);border-radius:var(--radius-sm);
+    padding:12px 16px;font-size:14px;font-weight:600;color:var(--navy);
+  }
+  .asset-item .check{color:var(--accent);font-weight:900;}
+
+  /* 3 points */
+  .pt3-grid{display:grid;grid-template-columns:1fr;gap:18px;}
+  @media (min-width:800px){.pt3-grid{grid-template-columns:repeat(3,1fr);}}
+  .pt3-card{background:#fff;border:1px solid var(--slate-100);border-radius:var(--radius-lg);padding:26px;box-shadow:var(--shadow);}
+  .pt3-card .n{font-size:26px;font-weight:900;color:var(--blue-200);margin-bottom:6px;}
+  .pt3-card h4{font-size:15.5px;margin-bottom:8px;}
+  .pt3-card p{font-size:13.5px;color:var(--text-sub);margin:0;}
+  .dl-box{
+    margin-top:32px;background:var(--navy);border-radius:var(--radius-lg);padding:30px;
+    display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;color:#fff;
+  }
+  .dl-box p{margin:0;font-size:14.5px;color:#cfe3ee;max-width:420px;}
+
+  /* Pricing */
+  .price-elements{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:36px;}
+  .price-chip{background:var(--blue-50);border-radius:99px;padding:8px 16px;font-size:13.5px;font-weight:600;color:var(--navy);}
+  .plan-grid{display:grid;grid-template-columns:1fr;gap:18px;}
+  @media (min-width:800px){.plan-grid{grid-template-columns:repeat(3,1fr);}}
+  .plan-card{border:1px solid var(--slate-100);border-radius:var(--radius-lg);padding:28px;text-align:center;}
+  .plan-card.mid{border-color:var(--blue-400);box-shadow:0 8px 24px rgba(79,168,219,.16);}
+  .plan-card h4{font-size:16px;margin-bottom:10px;}
+  .plan-card p{font-size:13.5px;color:var(--text-sub);}
+  .plan-price{font-size:14px;color:var(--blue-600);font-weight:800;margin:10px 0;}
+
+  /* Onboarding steps */
+  .onb-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+  @media (min-width:760px){.onb-grid{grid-template-columns:repeat(3,1fr);}}
+  @media (min-width:1040px){.onb-grid{grid-template-columns:repeat(6,1fr);}}
+  .onb-item{background:#fff;border:1px solid var(--slate-100);border-radius:var(--radius-md);padding:18px;text-align:center;box-shadow:var(--shadow);}
+  .onb-item .step{font-size:12px;color:var(--blue-600);font-weight:800;margin-bottom:8px;}
+  .onb-item h4{font-size:14px;margin-bottom:4px;}
+  .onb-item p{font-size:12.5px;color:var(--text-sub);margin:0;}
+
+  /* FAQ */
+  .faq-list{max-width:760px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid var(--slate-100);}
+  .faq-q{
+    width:100%;text-align:left;background:none;border:none;padding:20px 4px;
+    display:flex;justify-content:space-between;align-items:center;cursor:pointer;
+    font-size:15px;font-weight:700;color:var(--navy);gap:16px;
+  }
+  .faq-q .plus{flex:none;color:var(--blue-600);font-size:20px;font-weight:400;transition:transform .2s ease;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;font-size:14px;color:var(--text-sub);padding:0 4px;}
+  .faq-item.open .faq-a{padding-bottom:18px;}
+
+  /* Final CTA / form */
+  .team-section{background:var(--blue-50);padding-top:0;}
+  .team-wrap{display:grid;grid-template-columns:1fr;gap:32px;align-items:center;}
+  @media (min-width:900px){.team-wrap{grid-template-columns:1.1fr 1fr;}}
+  .team-photo{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow);}
+  .final{background:var(--blue-50);}
+  .final-grid{display:grid;grid-template-columns:1fr;gap:40px;}
+  @media (min-width:960px){.final-grid{grid-template-columns:1fr 1fr;}}
+  .assure-list{display:flex;flex-direction:column;gap:12px;margin-top:24px;}
+  .assure-item{display:flex;gap:10px;font-size:14px;color:var(--navy);font-weight:600;}
+  .assure-item .check{color:var(--accent);font-weight:900;}
+  form.contact{background:#fff;border-radius:var(--radius-lg);padding:30px;box-shadow:var(--shadow);}
+  .f-row{margin-bottom:16px;}
+  .f-row label{display:block;font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+  .f-row input,.f-row select,.f-row textarea{
+    width:100%;padding:11px 13px;border:1px solid var(--slate-300);border-radius:var(--radius-sm);
+    font-size:14px;font-family:inherit;color:var(--text-main);background:#fff;
+  }
+  .f-row input:focus,.f-row select:focus,.f-row textarea:focus{outline:2px solid var(--blue-400);border-color:transparent;}
+  .req{color:#e2685c;font-size:11px;font-weight:800;margin-left:6px;}
+  .opt{color:var(--text-sub);font-size:11px;font-weight:600;margin-left:6px;}
+  .f-checks label{display:flex;align-items:flex-start;gap:8px;font-weight:500;font-size:13.5px;color:var(--text-sub);margin-bottom:8px;}
+  .f-checks input{width:auto;margin-top:3px;}
+  form.contact .btn{width:100%;margin-top:6px;}
+
+  footer{background:var(--navy);color:#c9d8e0;padding:48px 0 28px;font-size:13.5px;}
+  .footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;margin-bottom:28px;}
+  .footer-logo{color:#fff;font-weight:800;font-size:18px;margin-bottom:10px;}
+  .footer-links{display:flex;flex-wrap:wrap;gap:20px;}
+  .footer-links a:hover{color:#fff;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;text-align:center;color:#8ea3af;font-size:12px;}
+
+  /* mobile sticky CTA */
+  .mobile-cta{
+    position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;
+    border-top:1px solid var(--slate-100);padding:10px 16px;display:flex;gap:10px;
+    box-shadow:0 -4px 16px rgba(0,0,0,.06);
+  }
+  .mobile-cta .btn{flex:1;padding:12px;font-size:14px;}
+  @media (min-width:900px){.mobile-cta{display:none;}}
+  body{padding-bottom:76px;}
+  @media (min-width:900px){body{padding-bottom:0;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="#top" class="logo"><img src="assets/aikasu-logo.png" alt="AIKASU"></a>
+    <nav class="links" aria-label="主要ナビゲーション">
+      <a href="#pains">よくある悩み</a>
+      <a href="#menu">支援メニュー</a>
+      <a href="#price">料金の考え方</a>
+      <a href="#case">支援事例</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-cta">
+      <a href="assets/AIKASU_RPOご説明資料.pdf" download class="btn btn-outline btn-sm" data-cta="header_doc">資料をダウンロード</a>
+      <a href="#contact" class="btn btn-primary btn-sm" data-cta="header_main">無料で採用業務を整理する</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1. Hero -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">採用担当者のための部分委託型RPO</span>
+      <h1>月3万円〜<br><span class="hl">部分的な人事業務を<wbr>カスタマイズして委託。</span></h1>
+      <p class="hero-sub">応募者対応、スカウト、面接調整、採用改善まで。足りない採用機能を、必要な業務・期間だけ補えるRPOサービスです。</p>
+      <p class="hero-note">採用担当者を増やす前に、今ある採用業務を整理しませんか。</p>
+      <div class="hero-feats">
+        <span class="feat-chip">必要な業務だけ選択可能</span>
+        <span class="feat-chip">新卒・中途どちらも対応</span>
+        <span class="feat-chip">1業務・短期間から依頼可</span>
+        <span class="feat-chip">終了後も社内にノウハウが残る</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary" data-cta="hero_main">無料で採用業務を整理する</a>
+        <a href="#menu" class="btn btn-outline" data-cta="hero_sub">依頼できる業務を見る</a>
+      </div>
+    </div>
+    <div class="hero-diagram" aria-hidden="true">
+      <div class="hd-support"></div>
+      <div class="hd-orbit"></div>
+      <div class="hd-center">採用<br>担当者</div>
+      <div class="hd-node" style="top:2%;left:50%;transform:translate(-50%,0);"><span class="dot"></span>スカウト運用</div>
+      <div class="hd-node" style="top:22%;right:0;"><span class="dot"></span>応募者対応</div>
+      <div class="hd-node" style="bottom:22%;right:2%;"><span class="dot"></span>面接調整</div>
+      <div class="hd-node" style="bottom:2%;left:50%;transform:translate(-50%,0);"><span class="dot"></span>エージェント対応</div>
+      <div class="hd-node" style="bottom:22%;left:0;"><span class="dot"></span>数値集計</div>
+      <div class="hd-node" style="top:22%;left:2%;"><span class="dot"></span>採用改善</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Pain points -->
+<section id="pains">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">採用担当者のよくある悩み</span>
+      <h2 class="section-title">採用業務に追われて、<br>本来やるべきことが<wbr>後回しになっていませんか。</h2>
+      <p class="section-lead">一人、あるいは少人数の採用担当者ほど、日々の実務に時間を取られがちです。</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card"><span class="num">01</span>応募者への返信が翌日以降になってしまう</div>
+      <div class="pain-card"><span class="num">02</span>面接の日程調整だけで一日が終わる</div>
+      <div class="pain-card"><span class="num">03</span>スカウトを送り続ける時間が取れない</div>
+      <div class="pain-card"><span class="num">04</span>人材紹介会社への対応が煩雑になっている</div>
+      <div class="pain-card"><span class="num">05</span>現場から採用を急かされてしまう</div>
+      <div class="pain-card"><span class="num">06</span>求人原稿を改善する時間が取れない</div>
+      <div class="pain-card"><span class="num">07</span>採用数値の集計・分析まで手が回らない</div>
+      <div class="pain-card"><span class="num">08</span>内定者フォローが十分にできていない</div>
+    </div>
+    <p class="pain-close">こうした状態が続くと、<strong>採用担当者が一人しかいない</strong>企業や、<strong>業務が増えても増員してもらえない</strong>企業ほど、本来注力すべき採用企画や改善に手が回らなくなります。</p>
+  </div>
+</section>
+
+<!-- 3. Structural problem -->
+<section style="background:var(--blue-50);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">採用が止まっている本当の理由</span>
+      <h2 class="section-title">採用が止まると、何が起きるか。</h2>
+      <p class="section-lead">人がいないから採れないのではなく、採用活動を動かし続ける時間と機能が足りていないケースがほとんどです。</p>
+    </div>
+    <div class="flow-row">
+      <div class="flow-step"><div class="fnum">1</div><h4>実務負担が積み重なる</h4><p>対応・調整・集計が担当者一人に集中する</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="fnum">2</div><h4>採用活動そのものが止まる</h4><p>スカウトや原稿更新など「動かす業務」が後回しに</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="fnum">3</div><h4>応募・面接・承諾に影響する</h4><p>母集団と選考の歩留まりが同時に落ちていく</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="fnum">4</div><h4>採用難の中で競争力を失う</h4><p>片手間運用のままでは他社との差が広がる</p></div>
+    </div>
+    <div class="flow-conclusion">だからこそ、必要な業務だけ外部のプロを活用する「RPO」という選択肢があります。</div>
+  </div>
+</section>
+
+<!-- 4. Alternatives -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">採用担当者を増やす以外の選択肢</span>
+      <h2 class="section-title">採用担当者を増やす前に、<br>比較しておきたいこと</h2>
+      <p class="section-lead">正社員を採用すべき企業もあります。まずは自社がどちらに当てはまるかを整理しましょう。</p>
+    </div>
+    <div class="compare-note">
+      <div class="note-card">
+        <h4>正社員採用が向いているケース</h4>
+        <ul>
+          <li>年間を通して大量採用がある</li>
+          <li>毎年一定数の採用を継続する</li>
+          <li>採用業務量が安定している</li>
+          <li>社内に専任チームを構築したい</li>
+        </ul>
+      </div>
+      <div class="note-card" style="background:var(--white);border:1.5px solid var(--blue-400);">
+        <h4>RPOが向いているケース</h4>
+        <ul>
+          <li>採用人数が時期によって変動する</li>
+          <li>欠員発生時だけ業務が増える</li>
+          <li>新卒採用を新しく始める</li>
+          <li>採用担当者が退職・不在になった</li>
+          <li>一部業務だけリソースが足りない</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pain-close" style="margin-top:32px;">採用担当者を雇うべき企業もあります。しかし、採用量が変動する企業が、常にフルタイムの専門人材を抱える必要はありません。</p>
+  </div>
+</section>
+
+<!-- 5. What AIKASU is -->
+<section style="background:var(--blue-50);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">AIKASUのRPOとは</span>
+      <h2 class="section-title">AIKASUは、人ではなく<br>「採用機能」を提供します。</h2>
+      <p class="section-lead">採用プロセスを工程ごとに分解し、必要な工程だけを選んで依頼できます。</p>
+    </div>
+    <div class="proc-row">
+      <span class="proc-chip"><span class="box"></span>採用計画</span>
+      <span class="proc-chip"><span class="box"></span>人材要件</span>
+      <span class="proc-chip"><span class="box"></span>求人・媒体</span>
+      <span class="proc-chip"><span class="box"></span>スカウト</span>
+      <span class="proc-chip"><span class="box"></span>学生・求職者集客</span>
+      <span class="proc-chip"><span class="box"></span>応募者対応</span>
+      <span class="proc-chip"><span class="box"></span>面接・選考</span>
+      <span class="proc-chip"><span class="box"></span>内定フォロー</span>
+      <span class="proc-chip"><span class="box"></span>数値分析</span>
+      <span class="proc-chip"><span class="box"></span>仕組み化</span>
+    </div>
+    <p class="proc-note">すべてを依頼する必要はありません。必要な工程だけをチェックして、部分的にご依頼いただけます。</p>
+  </div>
+</section>
+
+<!-- 6. Menu by concern -->
+<section id="menu">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">困りごと別の支援メニュー</span>
+      <h2 class="section-title">困りごとから、<br>支援内容を選べます。</h2>
+      <p class="section-lead">「何を頼めるか分からない」を防ぐため、業務単位で具体的にご案内します。</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="icon">✉</div>
+        <h4>応募者対応が回らない</h4>
+        <p>初動の遅れが選考離脱につながっていませんか。</p>
+        <ul>
+          <li>応募受付・一次返信</li><li>面接候補日の確認</li><li>面接日程調整</li><li>リマインド送付</li><li>ATS更新</li>
+        </ul>
+      </div>
+      <div class="menu-card">
+        <div class="icon">🔍</div>
+        <h4>スカウトを運用できない</h4>
+        <p>送信が止まった媒体、放置していませんか。</p>
+        <ul>
+          <li>ターゲット設計</li><li>検索条件の設定</li><li>スカウト文面作成</li><li>スカウト送信</li><li>返信対応・数値改善</li>
+        </ul>
+      </div>
+      <div class="menu-card">
+        <div class="icon">🤝</div>
+        <h4>エージェント対応に時間がかかる</h4>
+        <p>紹介会社とのやり取りが後回しになりがちです。</p>
+        <ul>
+          <li>人材紹介会社の開拓</li><li>求人情報の共有</li><li>推薦対応・選考連絡</li><li>紹介数の管理</li><li>採用単価の分析</li>
+        </ul>
+      </div>
+      <div class="menu-card">
+        <div class="icon">🎓</div>
+        <h4>新卒採用に手が回らない</h4>
+        <p>母集団形成から選考移行までを支援します。</p>
+        <ul>
+          <li>学生集客・大学との接点づくり</li><li>説明会の企画・合同説明会運営</li><li>インターン集客</li><li>学生への連絡・選考移行の改善</li>
+        </ul>
+      </div>
+      <div class="menu-card">
+        <div class="icon">📊</div>
+        <h4>採用を改善する時間がない</h4>
+        <p>実務に追われ、企画や改善が止まっていませんか。</p>
+        <ul>
+          <li>採用KPIの整理</li><li>求人票・選考フロー改善</li><li>面接評価基準づくり</li><li>辞退理由分析・月次レポート</li>
+        </ul>
+      </div>
+      <div class="menu-card" style="background:var(--blue-50);border:none;">
+        <div class="icon" style="background:#fff;">＋</div>
+        <h4>ここにない業務もご相談ください</h4>
+        <p>上記に当てはまらない採用実務も、内容を伺ったうえで個別にご提案します。</p>
+        <a href="#contact" class="btn btn-outline btn-sm" data-cta="menu_other">相談してみる</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Role split -->
+<section style="background:var(--blue-50);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">採用担当者とAIKASUの役割分担</span>
+      <h2 class="section-title">採用担当者にしかできない仕事を、<br>後回しにしないために。</h2>
+      <p class="section-lead">AIKASUは採用担当者の仕事を奪うのではなく、実務を巻き取ることで判断業務に集中できる状態をつくります。</p>
+    </div>
+    <div class="role-grid">
+      <div class="role-card you">
+        <h4>採用担当者が担う業務</h4>
+        <ul>
+          <li>経営・現場との調整</li>
+          <li>人材要件の最終判断</li>
+          <li>候補者への魅力づけ</li>
+          <li>採用の合否判断</li>
+          <li>社内文化の伝達</li>
+          <li>入社後の受け入れ</li>
+        </ul>
+      </div>
+      <div class="role-vs">↔</div>
+      <div class="role-card us">
+        <h4>AIKASUが補う業務</h4>
+        <ul>
+          <li>採用実務・日程調整</li>
+          <li>スカウト運用</li>
+          <li>応募者対応</li>
+          <li>数値集計・分析</li>
+          <li>採用プロセス改善</li>
+          <li>マニュアル作成</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. KPI -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">支援業務と改善する採用KPI</span>
+      <h2 class="section-title">実務を巻き取るだけでなく、<br>数値の変化まで見ます。</h2>
+      <p class="section-lead">依頼いただいた業務が、どの指標の改善につながるかを明確にしてご報告します。</p>
+    </div>
+    <div class="table-wrap">
+      <table class="kpi-table">
+        <thead><tr><th>実行する業務</th><th>改善を目指す指標</th></tr></thead>
+        <tbody>
+          <tr><td>求人原稿の改善</td><td>閲覧数・応募率</td></tr>
+          <tr><td>スカウト運用</td><td>送信数・返信率</td></tr>
+          <tr><td>応募初動対応</td><td>面接設定率</td></tr>
+          <tr><td>面接リマインド</td><td>面接実施率</td></tr>
+          <tr><td>説明会内容の改善</td><td>選考移行率</td></tr>
+          <tr><td>面接官トレーニング</td><td>選考通過率・辞退率</td></tr>
+          <tr><td>内定者フォロー</td><td>内定承諾率</td></tr>
+          <tr><td>エージェント管理</td><td>推薦数・採用単価</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Support model -->
+<section style="background:var(--blue-50);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">診断から仕組み化までの流れ</span>
+      <h2 class="section-title">診断して、実行して、改善して、<br>最後に仕組みを残す。</h2>
+    </div>
+    <div class="model-list">
+      <div class="model-item"><div class="model-badge">1</div><div class="model-body"><h4>採用課題診断</h4><p>採用人数・職種・期限・現在の体制を確認し、どこで採用が止まっているかを可視化します。</p></div></div>
+      <div class="model-item"><div class="model-badge">2</div><div class="model-body"><h4>内製・外注の仕分け</h4><p>社内に残す判断業務と、AIKASUに任せる実務、将来自社に戻す業務を整理します。</p></div></div>
+      <div class="model-item"><div class="model-badge">3</div><div class="model-body"><h4>実行</h4><p>整理した業務のうち、必要なものだけ支援を開始します。</p></div></div>
+      <div class="model-item"><div class="model-badge">4</div><div class="model-body"><h4>月次改善</h4><p>採用KPIを確認し、翌月の改善施策を一緒に決定します。</p></div></div>
+      <div class="model-item"><div class="model-badge">5</div><div class="model-body"><h4>仕組み化</h4><p>文面・基準・業務フロー・マニュアルとして型に残します。</p></div></div>
+      <div class="model-item"><div class="model-badge">6</div><div class="model-body"><h4>移管・部分継続</h4><p>自社運用への移管、一部継続、繁忙期のみの利用など、終了後の形も選べます。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. Case -->
+<section id="case" style="background:var(--blue-50);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">支援イメージ</span>
+      <h2 class="section-title">支援事例</h2>
+      <p class="section-lead">実績データが確定次第、数値とあわせて公開してまいります。以下は支援内容のイメージです。</p>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">支援イメージ</span>
+      <div class="case-title">合同説明会には人が集まるが、自社説明会や選考に進んでもらえない</div>
+      <div class="case-body">
+        <div class="case-col">
+          <h5>支援前の状況</h5>
+          <ul>
+            <li>合同説明会の参加者数は確保できている</li>
+            <li>自社説明会への移行率が低い</li>
+            <li>学生が興味を持てない理由を把握できていない</li>
+          </ul>
+        </div>
+        <div class="case-col">
+          <h5>AIKASUの支援内容</h5>
+          <ul>
+            <li>参加学生へのヒアリング</li>
+            <li>説明会内容の見直し</li>
+            <li>参加後のフォロー導線の設計</li>
+            <li>選考移行率の計測</li>
+          </ul>
+        </div>
+      </div>
+      <div class="case-footer">支援終了後に企業側に残るもの:説明会構成案・学生アンケートの型・フォロー文面・運用手順書</div>
+    </div>
+  </div>
+</section>
+
+<!-- 12. Assets -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">社内に残る採用資産</span>
+      <h2 class="section-title">支援が終わっても、<br>採用の型は会社に残ります。</h2>
+    </div>
+    <div class="asset-grid">
+      <div class="asset-item"><span class="check">✓</span>採用年間計画</div>
+      <div class="asset-item"><span class="check">✓</span>採用KPI設計</div>
+      <div class="asset-item"><span class="check">✓</span>求人票テンプレート</div>
+      <div class="asset-item"><span class="check">✓</span>スカウト文面テンプレート</div>
+      <div class="asset-item"><span class="check">✓</span>応募者対応の文面集</div>
+      <div class="asset-item"><span class="check">✓</span>面接評価基準</div>
+      <div class="asset-item"><span class="check">✓</span>面接官向けマニュアル</div>
+      <div class="asset-item"><span class="check">✓</span>説明会資料</div>
+      <div class="asset-item"><span class="check">✓</span>エージェント管理表</div>
+      <div class="asset-item"><span class="check">✓</span>採用業務マニュアル</div>
+      <div class="asset-item"><span class="check">✓</span>月次採用レポートの型</div>
+    </div>
+  </div>
+</section>
+
+<!-- 13. Comparison table -->
+<section style="background:var(--blue-50);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">他の採用手段との比較</span>
+      <h2 class="section-title">採用手段ごとの特徴</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>比較軸</th><th>正社員採用</th><th>人材紹介</th><th>求人広告</th><th>AIKASU(RPO)</th></tr></thead>
+        <tbody>
+          <tr><td>費用構造</td><td>固定費(給与)</td><td>成功報酬</td><td>掲載料(前払い)</td><td>依頼業務に応じた変動費</td></tr>
+          <tr><td>採用量の変動対応</td><td>しづらい</td><td>対応しやすい</td><td>対応しやすい</td><td class="ok">対応しやすい</td></tr>
+          <tr><td>立ち上がりの速さ</td><td>採用に数ヶ月</td><td>比較的早い</td><td>掲載後すぐ</td><td class="ok">診断後すぐ着手可</td></tr>
+          <tr><td>社内ノウハウの蓄積</td><td>蓄積しやすい</td><td>蓄積しにくい</td><td>蓄積しにくい</td><td class="ok">仕組み化して残す</td></tr>
+          <tr><td>部分的な依頼</td><td>不可</td><td>不可</td><td>不可(媒体単位)</td><td class="ok">業務単位で可能</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 14. 3 points -->
+<section id="doc">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">社内提案に使えるポイント</span>
+      <h2 class="section-title">社内でRPOを提案する際に、<br>説明しやすい3つのポイント</h2>
+    </div>
+    <div class="pt3-grid">
+      <div class="pt3-card"><div class="n">01</div><h4>固定費ではなく、必要な期間だけ利用できる</h4><p>常にフルタイムの専門人材を抱える必要がなく、繁忙期・欠員時など必要なタイミングだけ活用できます。</p></div>
+      <div class="pt3-card"><div class="n">02</div><h4>人材紹介だけに依存せず、採用チャネルを増やせる</h4><p>スカウトや母集団形成を並行して進められるため、紹介会社への依存と採用単価の上昇を抑えられます。</p></div>
+      <div class="pt3-card"><div class="n">03</div><h4>支援終了後も、仕組みとノウハウが残る</h4><p>業務代行だけで終わらせず、テンプレートやマニュアルとして社内に資産化します。</p></div>
+    </div>
+    <div class="dl-box">
+      <div>
+        <h4 style="color:#fff;font-size:16px;margin-bottom:6px;">上司・経営陣への共有用資料をご用意しています</h4>
+        <p>費用対効果や導入の考え方をまとめた資料をダウンロードいただけます。</p>
+      </div>
+      <a href="assets/AIKASU_RPOご説明資料.pdf" download class="btn btn-primary" data-cta="doc_download">社内説明用の資料をダウンロード</a>
+    </div>
+  </div>
+</section>
+
+<!-- 15. Pricing -->
+<section id="price" style="background:var(--blue-50);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">料金の考え方</span>
+      <h2 class="section-title">必要な業務量と<br>専門性に合わせて設計します。</h2>
+      <p class="section-lead">料金は以下の要素をもとに個別にお見積りします。決まった金額を掲載せず、状況に応じてご提案します。</p>
+    </div>
+    <div class="price-elements">
+      <span class="price-chip">委託する業務</span>
+      <span class="price-chip">月間対応件数</span>
+      <span class="price-chip">採用職種数</span>
+      <span class="price-chip">採用拠点数</span>
+      <span class="price-chip">必要な専門性</span>
+      <span class="price-chip">支援期間</span>
+      <span class="price-chip">月次改善の範囲</span>
+      <span class="price-chip">マニュアル化の範囲</span>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-card"><h4>業務単位プラン</h4><div class="plan-price">要見積もり</div><p>特定の実務だけを、必要な分だけ依頼したい企業向け。</p></div>
+      <div class="plan-card mid"><h4>短期プロジェクトプラン</h4><div class="plan-price">要見積もり</div><p>新卒採用・繁忙期など、期間を区切って集中支援を受けたい企業向け。</p></div>
+      <div class="plan-card"><h4>採用チーム伴走プラン</h4><div class="plan-price">要見積もり</div><p>診断から仕組み化まで、継続的に伴走してほしい企業向け。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 16. Onboarding -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">導入までの流れ</span>
+      <h2 class="section-title">ご相談から支援開始までの流れ</h2>
+    </div>
+    <div class="onb-grid">
+      <div class="onb-item"><div class="step">STEP1</div><h4>お問い合わせ</h4><p>フォームより現状をご連絡</p></div>
+      <div class="onb-item"><div class="step">STEP2</div><h4>無料ヒアリング</h4><p>オンラインで状況を確認</p></div>
+      <div class="onb-item"><div class="step">STEP3</div><h4>採用課題の整理</h4><p>止まっている箇所を可視化</p></div>
+      <div class="onb-item"><div class="step">STEP4</div><h4>ご提案・お見積り</h4><p>依頼範囲と費用をご提示</p></div>
+      <div class="onb-item"><div class="step">STEP5</div><h4>ご契約</h4><p>業務範囲・期間を確定</p></div>
+      <div class="onb-item"><div class="step">STEP6</div><h4>支援開始</h4><p>実行と月次改善を開始</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 17. FAQ -->
+<section id="faq" style="background:var(--blue-50);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">よくある質問</span>
+      <h2 class="section-title">よくある質問</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">一部の業務だけ依頼できますか<span class="plus">+</span></button>
+        <div class="faq-a"><p>可能です。応募者対応やスカウト運用など、1業務単位からご依頼いただけます。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">1ヶ月だけの依頼は可能ですか<span class="plus">+</span></button>
+        <div class="faq-a"><p>可能です。繁忙期や欠員発生時など、短期間のご利用にも対応しています。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">現在使っているATSや媒体を変更する必要がありますか<span class="plus">+</span></button>
+        <div class="faq-a"><p>変更の必要はありません。現在お使いのツールに合わせて支援いたします。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">新卒採用にも対応できますか<span class="plus">+</span></button>
+        <div class="faq-a"><p>対応可能です。母集団形成から選考移行の改善まで支援いたします。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">中途採用にも対応できますか<span class="plus">+</span></button>
+        <div class="faq-a"><p>対応可能です。職種・拠点数に応じてご提案します。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">社内に採用担当者がいなくても依頼できますか<span class="plus">+</span></button>
+        <div class="faq-a"><p>ご相談いただけます。体制づくりの段階からご一緒します。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">人材要件が固まっていなくても相談できますか<span class="plus">+</span></button>
+        <div class="faq-a"><p>問題ありません。診断の中で要件整理からサポートします。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">契約終了後はどのようになりますか<span class="plus">+</span></button>
+        <div class="faq-a"><p>自社運用への移管、一部継続、繁忙期のみの再利用などから選べます。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">社内にノウハウは残りますか<span class="plus">+</span></button>
+        <div class="faq-a"><p>文面・基準・マニュアルなどの形で、支援終了後も社内に残ります。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">九州以外の企業でも依頼できますか<span class="plus">+</span></button>
+        <div class="faq-a"><p>可能です。オンラインで全国対応しており、九州エリアの新卒採用には特に強みがあります。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. Kyushu (supplementary, placed after FAQ) -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">九州・地方・新卒採用における強み</span>
+      <h2 class="section-title">求人を出すだけでは届かない、<br>九州の学生・企業との接点をつくります。</h2>
+    </div>
+    <div class="kyushu-wrap">
+      <div class="kyushu-list">
+        <div class="kyushu-item"><span class="dot2">●</span>九州の大学生母集団形成</div>
+        <div class="kyushu-item"><span class="dot2">●</span>大学別の学生集客</div>
+        <div class="kyushu-item"><span class="dot2">●</span>合同説明会の企画・動員</div>
+        <div class="kyushu-item"><span class="dot2">●</span>インターンシップ集客</div>
+        <div class="kyushu-item"><span class="dot2">●</span>学生イベントの運営</div>
+        <div class="kyushu-item"><span class="dot2">●</span>大学との接点づくり</div>
+        <div class="kyushu-item"><span class="dot2">●</span>説明会内容の改善</div>
+        <div class="kyushu-item"><span class="dot2">●</span>地方企業の魅力の言語化</div>
+      </div>
+      <div class="kyushu-visual">
+        <img src="assets/seminar-photo.jpg" alt="九州の大学で実施した就職活動セミナーの様子" style="width:100%;border-radius:12px;margin-bottom:16px;">
+        <div class="big">全国一律の採用実務ではなく、<br>地域の接点づくりから支援します。</div>
+        <div class="small">九州の学生・大学・地域イベントへの対応は、一般的なRPOにはない領域です。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="team-section">
+  <div class="wrap team-wrap">
+    <img src="assets/team-photo.jpg" alt="AIKASU 採用支援チーム" class="team-photo">
+    <div class="team-text">
+      <span class="eyebrow">支援するメンバー</span>
+      <h2 class="section-title" style="text-align:left;">実務を熟知したメンバーが、<br>直接支援します。</h2>
+      <p class="section-lead" style="text-align:left;margin:0;">丸投げの外注ではなく、採用実務と改善の両方を理解したメンバーが、貴社の採用チームの一員として動きます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 18. Final CTA -->
+<section class="final" id="contact">
+  <div class="wrap final-grid">
+    <div>
+      <span class="eyebrow">無料相談</span>
+      <h2 class="section-title" style="text-align:left;">今の採用業務を、<br>一度整理してみませんか。</h2>
+      <p class="section-lead" style="text-align:left;margin:0;">すべてを外部に任せる必要はありません。現在の採用業務を確認し、社内で続ける業務と、外部の力を活用した方がよい業務を一緒に整理します。</p>
+      <div class="assure-list">
+        <div class="assure-item"><span class="check">✓</span>RPOの導入を前提とした相談ではありません</div>
+        <div class="assure-item"><span class="check">✓</span>一部業務だけの相談も可能です</div>
+        <div class="assure-item"><span class="check">✓</span>採用体制が決まっていなくても相談できます</div>
+        <div class="assure-item"><span class="check">✓</span>オンラインで相談できます</div>
+        <div class="assure-item"><span class="check">✓</span>無理な営業は行いません</div>
+      </div>
+      <div class="hero-ctas" style="margin-top:24px;">
+        <a href="https://app.spirinc.com/t/A-NJ9TQHFJ_5_E2BA4ltb/as/0USZaxnV2b49eZm56Vwbh/confirm" target="_blank" rel="noopener" class="btn btn-primary" data-cta="final_schedule">オンラインで日程調整する</a>
+        <a href="assets/AIKASU_RPOご説明資料.pdf" download class="btn btn-outline" data-cta="final_doc">社内説明用資料をダウンロード</a>
+      </div>
+      <p style="font-size:12.5px;color:var(--text-sub);margin-top:10px;">日程調整ページから、そのまま無料相談の日時を予約いただけます。</p>
+    </div>
+    <form class="contact" data-cta="final_form_submit">
+      <div class="f-row">
+        <label for="company">会社名<span class="req">必須</span></label>
+        <input type="text" id="company" name="company" required autocomplete="organization">
+      </div>
+      <div class="f-row">
+        <label for="name">氏名<span class="req">必須</span></label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+      <div class="f-row">
+        <label for="email">メールアドレス<span class="req">必須</span></label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+      <div class="f-row">
+        <label for="tel">電話番号<span class="opt">任意</span></label>
+        <input type="tel" id="tel" name="tel" autocomplete="tel">
+      </div>
+      <div class="f-row">
+        <label for="issue">現在困っていること<span class="opt">任意</span></label>
+        <textarea id="issue" name="issue" rows="3"></textarea>
+      </div>
+      <div class="f-row">
+        <label for="topic">希望する相談内容<span class="req">必須</span></label>
+        <select id="topic" name="topic" required>
+          <option value="" disabled selected>選択してください</option>
+          <option>採用業務の一部を委託したい</option>
+          <option>採用体制を整理したい</option>
+          <option>新卒採用を改善したい</option>
+          <option>中途採用を改善したい</option>
+          <option>学生を集客したい</option>
+          <option>採用担当者が不足している</option>
+          <option>まずは話を聞きたい</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" data-cta="final_submit">無料で採用業務を整理する</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="assets/aikasu-logo.png" alt="AIKASU"></div>
+        <p style="margin:0;max-width:280px;">必要な採用機能だけを、必要な時だけ。診断・実務・改善・仕組み化までを支援するRPOサービスです。</p>
+      </div>
+      <nav class="footer-links" aria-label="フッターナビゲーション">
+        <a href="#menu">支援メニュー</a>
+        <a href="#price">料金の考え方</a>
+        <a href="#case">支援事例</a>
+        <a href="#faq">よくある質問</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">&copy; 2026 AIKASU. All rights reserved.</div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="#menu" class="btn btn-outline" data-cta="mobile_sub">業務を見る</a>
+  <a href="#contact" class="btn btn-primary" data-cta="mobile_main">無料で整理する</a>
+</div>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var was = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!was){
+        item.classList.add('open');
+        var a = item.querySelector('.faq-a');
+        a.style.maxHeight = a.scrollHeight + 30 + 'px';
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-cta]').forEach(function(el){
+    el.addEventListener('click', function(){
+      var label = el.getAttribute('data-cta');
+      if(window.gtag){ window.gtag('event','cta_click',{cta_label:label}); }
+      if(window.dataLayer){ window.dataLayer.push({event:'cta_click', cta_label:label}); }
+    });
+  });
+
+  var form = document.querySelector('form.contact');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('送信内容を確認しました。担当者よりご連絡いたします。(このデモではフォームは実際に送信されません)');
+    });
+  }
+</script>
+
+</body>
+</html>
