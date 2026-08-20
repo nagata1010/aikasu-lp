@@ -127,14 +127,22 @@
   .hero h1{font-size:clamp(24px,6.2vw,40px);font-weight:800;letter-spacing:.01em;}
   .hero h1 .hl{color:var(--primary-dark);font-size:1.08em;}
   .hero-sub{margin-top:16px;font-size:19px;color:var(--text);font-weight:700;max-width:480px;}
-  .hero-detail{margin-top:16px;font-size:14.5px;color:var(--muted);max-width:480px;}
-  .hero-detail p{margin:0 0 2px;}
-  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;}
+  .hero-questions{margin-top:22px;display:flex;flex-direction:column;gap:9px;max-width:480px;}
+  .hero-questions p{
+    margin:0;font-size:16.5px;font-weight:600;color:var(--text);
+    padding-left:20px;position:relative;
+  }
+  .hero-questions p::before{content:"";position:absolute;left:0;top:11px;width:11px;height:2px;background:var(--primary);}
+  .hero-answer{margin:14px 0 0;font-size:19px;font-weight:800;color:var(--primary-dark);max-width:480px;}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
   .hero-assure{margin-top:12px;font-size:13.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
   .hero-assure::before{content:"✓";color:var(--primary);font-weight:800;}
   @media (max-width:959px){
     .hero-grid > div:first-child{text-align:center;}
-    .hero-sub,.hero-detail{margin-left:auto;margin-right:auto;}
+    .hero-sub,.hero-answer{margin-left:auto;margin-right:auto;}
+    .hero-questions{margin-left:auto;margin-right:auto;}
+    .hero-questions p{padding-left:0;}
+    .hero-questions p::before{display:none;}
     .hero-ctas{justify-content:center;}
     .hero-assure{justify-content:center;}
   }
@@ -325,8 +333,6 @@
 
   footer{background:var(--primary-dark);color:var(--primary-100);padding:36px 0 24px;font-size:13px;}
   .footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px;margin-bottom:20px;}
-  .footer-logo{color:#fff;font-weight:800;font-size:16px;display:flex;align-items:center;gap:8px;}
-  .footer-logo img{height:20px;width:auto;filter:brightness(0) invert(1);}
   .footer-links{display:flex;flex-wrap:wrap;gap:18px;}
   .footer-links a:hover{color:#fff;}
   .footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:16px;text-align:center;color:#9FBDBB;font-size:12px;}
@@ -370,12 +376,12 @@
       <span class="eyebrow">10社以上応募して、面接0件の方へ。</span>
       <h1>書類で落ちる理由、<br><span class="hl">正直にお伝えします。</span></h1>
       <p class="hero-sub">履歴書・職務経歴書を、<br>採用する側の目で無料診断。</p>
-      <div class="hero-detail">
+      <div class="hero-questions">
         <p>書類を直すべきか。</p>
         <p>受ける仕事を変えるべきか。</p>
         <p>希望条件を見直すべきか。</p>
-        <p>あなたの場合を具体的にお伝えします。</p>
       </div>
+      <p class="hero-answer">あなたの場合を具体的にお伝えします。</p>
       <div class="hero-ctas">
         <a href="#application" class="btn btn-primary" data-cta="hero" data-cta-location="hero">無料で書類を見てもらう</a>
       </div>
@@ -679,7 +685,6 @@
 <footer>
   <div class="wrap">
     <div class="footer-grid">
-      <div class="footer-logo"><img src="assets/aikasu-logo.png" alt="AIKASU"></div>
       <nav class="footer-links" aria-label="フッターナビゲーション" id="footer-links">
         <a href="#diagnosis">診断でわかること</a>
         <a href="#faq">よくある質問</a>
