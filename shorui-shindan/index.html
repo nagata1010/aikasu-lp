@@ -122,44 +122,45 @@
   .btn:focus-visible{outline:3px solid var(--badge-line);outline-offset:2px;}
 
   /* Hero */
-  .hero{padding:36px 0 56px;background:linear-gradient(180deg,var(--bg-soft) 0%,var(--bg) 100%);}
-  .hero-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center;}
-  @media (min-width:960px){.hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr);}}
+  .hero{position:relative;overflow:hidden;padding:32px 0 0;background:linear-gradient(180deg,var(--bg-soft) 0%,var(--bg) 100%);}
+  .hero-content{position:relative;z-index:2;max-width:520px;padding-bottom:36px;text-align:center;margin:0 auto;}
   .hero h1{font-size:clamp(24px,6.2vw,40px);font-weight:800;letter-spacing:.01em;}
-  .hero-sub{margin-top:16px;font-size:19px;color:var(--text);font-weight:700;max-width:480px;}
-  .hero-questions{margin-top:22px;display:flex;flex-direction:column;gap:9px;max-width:480px;}
-  .hero-questions p{
-    margin:0;font-size:16.5px;font-weight:600;color:var(--text);
-    padding-left:20px;position:relative;
-  }
-  .hero-questions p::before{content:"";position:absolute;left:0;top:11px;width:11px;height:2px;background:var(--badge);}
-  .hero-answer{margin:14px 0 0;font-size:19px;font-weight:800;color:var(--heading);max-width:480px;}
+  .hero-sub{margin-top:16px;font-size:19px;color:var(--text);font-weight:700;max-width:480px;margin-left:auto;margin-right:auto;}
+  .hero-questions{margin-top:22px;display:flex;flex-direction:column;gap:9px;max-width:480px;margin-left:auto;margin-right:auto;}
+  .hero-questions p{margin:0;font-size:16.5px;font-weight:600;color:var(--text);}
+  .hero-answer{margin:14px auto 0;font-size:19px;font-weight:800;color:var(--heading);max-width:480px;}
   .hero-badge{
     display:inline-flex;align-items:center;gap:7px;margin-top:20px;
     padding:8px 16px;border-radius:99px;border:1.5px solid var(--badge-line);
     background:var(--badge-soft);color:var(--badge);font-size:13.5px;font-weight:700;
   }
   .hero-badge svg{flex:none;}
-  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
-  .hero-assure{margin-top:12px;font-size:13.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+  .hero-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:26px;}
+  .hero-assure{margin-top:12px;font-size:13.5px;color:var(--muted);display:flex;justify-content:center;align-items:center;gap:6px;}
   .hero-assure::before{content:"✓";color:var(--primary);font-weight:800;}
-  @media (max-width:959px){
-    .hero-grid > div:first-child{text-align:center;}
-    .hero-sub,.hero-answer{margin-left:auto;margin-right:auto;}
-    .hero-questions{margin-left:auto;margin-right:auto;}
-    .hero-questions p{padding-left:0;}
-    .hero-questions p::before{display:none;}
-    .hero-ctas{justify-content:center;}
-    .hero-assure{justify-content:center;}
+
+  /* Hero photo: stacked below the copy on mobile, bled to the right edge on desktop */
+  .hero-photo-bleed{position:relative;margin-top:28px;}
+  .hero-photo-bleed .hero-photo{width:100%;height:auto;display:block;}
+  .hero-photo-bleed .hero-phone{
+    position:absolute;right:5%;bottom:-22px;width:42%;height:auto;
+    filter:drop-shadow(0 8px 18px rgba(28,43,74,.25));
   }
 
-  /* Hero visual */
-  .hero-visual{display:flex;justify-content:center;align-items:center;}
-  .hero-photo-wrap{position:relative;width:100%;max-width:300px;}
-  .hero-photo-wrap .hero-photo{width:100%;height:auto;border-radius:var(--radius-lg);display:block;}
-  .hero-photo-wrap .hero-phone{
-    position:absolute;right:4%;bottom:-24px;width:44%;height:auto;
-    filter:drop-shadow(0 8px 18px rgba(28,43,74,.25));
+  @media (min-width:960px){
+    .hero{padding:0;}
+    .hero-content{text-align:left;margin:0;padding:64px 0 72px;}
+    .hero-sub,.hero-questions,.hero-answer{margin-left:0;margin-right:0;}
+    .hero-ctas,.hero-assure{justify-content:flex-start;}
+    .hero-photo-bleed{
+      position:absolute;top:0;right:0;bottom:0;width:44%;margin-top:0;
+      display:flex;align-items:center;
+    }
+    .hero-photo-bleed .hero-photo{width:100%;height:100%;object-fit:cover;}
+    .hero-photo-bleed .hero-phone{
+      right:auto;left:-9%;bottom:auto;top:50%;width:36%;
+      transform:translateY(-50%);
+    }
   }
 
   /* Pain points */
@@ -400,8 +401,8 @@
 
 <!-- 1. Hero -->
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
+  <div class="wrap">
+    <div class="hero-content">
       <span class="eyebrow">10社以上応募して、面接0件の方へ。</span>
       <h1>書類で落ちる理由、<br><span class="hl">正直にお伝えします。</span></h1>
       <p class="hero-sub">履歴書・職務経歴書を、<br>採用する側の目で無料診断。</p>
@@ -420,12 +421,10 @@
       </div>
       <p class="hero-assure">無理に求人へ応募させることはありません</p>
     </div>
-    <div class="hero-visual">
-      <div class="hero-photo-wrap">
-        <img class="hero-photo" src="assets/hero-photo.jpg" alt="選考結果の連絡を見て考え込む男性(イメージ)" width="700" height="991" loading="eager">
-        <img class="hero-phone" src="assets/rejection-mail-hero.svg" alt="" aria-hidden="true" width="1200" height="1400" loading="eager">
-      </div>
-    </div>
+  </div>
+  <div class="hero-photo-bleed">
+    <img class="hero-photo" src="assets/hero-photo.jpg" alt="選考結果の連絡を見て考え込む男性(イメージ)" width="700" height="991" loading="eager">
+    <img class="hero-phone" src="assets/rejection-mail-hero.svg" alt="" aria-hidden="true" width="1200" height="1400" loading="eager">
   </div>
 </section>
 
