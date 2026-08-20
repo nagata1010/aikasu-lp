@@ -5,19 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>書類で落ちる理由、正直にお伝えします｜AIKASU</title>
 <meta name="description" content="何社応募しても面接に進めない方へ。履歴書・職務経歴書を採用側の目線で無料診断。書類、応募先、希望条件のどこに原因があるのかを率直にお伝えします。">
+<link rel="canonical" href="https://nagata1010.github.io/aikasu-lp/shorui-shindan/">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://nagata1010.github.io/aikasu-lp/shorui-shindan/">
 <meta property="og:title" content="書類で落ちる理由、正直にお伝えします｜AIKASU">
 <meta property="og:description" content="何社応募しても面接に進めない方へ。履歴書・職務経歴書を採用側の目線で無料診断。書類、応募先、希望条件のどこに原因があるのかを率直にお伝えします。">
 <meta property="og:locale" content="ja_JP">
-<!-- og:image is relative for now (no production domain set). Facebook's crawler requires an absolute URL, so switch this to the full https://... path once the domain is decided. -->
-<meta property="og:image" content="assets/og-thumbnail.png">
+<meta property="og:image" content="https://nagata1010.github.io/aikasu-lp/shorui-shindan/assets/og-thumbnail.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="書類で落ちる理由、正直にお伝えします｜AIKASU">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="書類で落ちる理由、正直にお伝えします｜AIKASU">
 <meta name="twitter:description" content="何社応募しても面接に進めない方へ。履歴書・職務経歴書を採用側の目線で無料診断。書類、応募先、希望条件のどこに原因があるのかを率直にお伝えします。">
-<meta name="twitter:image" content="assets/og-thumbnail.png">
+<meta name="twitter:image" content="https://nagata1010.github.io/aikasu-lp/shorui-shindan/assets/og-thumbnail.png">
 <link rel="icon" type="image/png" href="assets/aikasu-logo.png">
 <script type="application/ld+json">
 {
@@ -28,29 +29,31 @@
     "@type": "Organization",
     "name": "AIKASU"
   },
+  "url": "https://nagata1010.github.io/aikasu-lp/shorui-shindan/",
   "areaServed": "JP",
   "description": "書類選考で落ち続けている求職者向けに、履歴書・職務経歴書を採用側の視点から無料診断するサービス"
 }
 </script>
 <style>
   :root{
-    --bg:#FFFFFF;
+    --bg:#FFFDF8;
+    --bg-soft:#F1FAF7;
     --surface:#FFFFFF;
-    --bg-tint:#FAFAF8;
-    --primary:#2F8FC7;
-    --primary-dark:#1F6B99;
-    --primary-50:#F2F8FD;
-    --primary-100:#E3F1FB;
-    --primary-200:#CDE6F8;
-    --accent:#D9776A;
-    --accent-100:#F8E6E2;
+    --primary:#24766F;
+    --primary-hover:#1D625C;
+    --primary-dark:#19544F;
+    --primary-50:#F1FAF7;
+    --primary-100:#DDF3ED;
+    --primary-200:#C3E6DD;
+    --accent:#E98270;
+    --accent-100:#FFF0EB;
     --text:#243238;
-    --muted:#657277;
-    --line:#E4DED2;
-    --radius-lg:20px;
-    --radius-md:14px;
+    --muted:#5F6F73;
+    --line:#DFEAE6;
+    --radius-lg:16px;
+    --radius-md:12px;
     --radius-sm:8px;
-    --shadow:0 2px 14px rgba(36,50,56,0.08);
+    --shadow:0 4px 20px rgba(25,84,79,0.10);
     --max:1080px;
   }
   *{box-sizing:border-box;}
@@ -75,21 +78,29 @@
   @media (max-width:768px){ section{padding:48px 0;} }
 
   h1,h2,h3,h4{margin:0;line-height:1.5;color:var(--text);}
+
+  /* Pill "eyebrow" badge: reserved for at most 3 spots on the whole page (see design rules) */
   .eyebrow{
     display:inline-block;font-size:13px;font-weight:700;color:var(--primary);
     background:var(--primary-100);padding:5px 14px;border-radius:99px;letter-spacing:.03em;margin-bottom:14px;
+  }
+  /* Plain small-caps label used everywhere else instead of a repeated pill badge */
+  .kicker{
+    display:block;font-size:13px;font-weight:700;color:var(--primary-dark);
+    letter-spacing:.04em;margin-bottom:10px;
   }
   .section-title{font-size:clamp(21px,3.2vw,30px);font-weight:800;margin-bottom:14px;}
   .section-lead{color:var(--muted);font-size:16px;max-width:600px;margin:0 auto;}
   .section-head{text-align:center;margin-bottom:40px;}
   .section-head.left{text-align:left;margin-left:0;}
+  .section-head.left .section-lead{margin-left:0;margin-right:0;max-width:640px;}
 
   /* Header */
   header{
-    position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);
+    position:sticky;top:0;z-index:50;background:rgba(255,253,248,.94);
     backdrop-filter:blur(6px);border-bottom:1px solid var(--line);
   }
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:var(--max);margin:0 auto;gap:16px;}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:var(--max);margin:0 auto;gap:12px;}
   .logo{font-size:19px;font-weight:800;color:var(--text);letter-spacing:.02em;display:flex;align-items:center;flex:none;}
   .logo img{height:24px;width:auto;display:block;}
   nav.links{display:none;gap:24px;font-size:14px;font-weight:600;color:var(--muted);}
@@ -99,14 +110,14 @@
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:8px;
     padding:14px 26px;border-radius:99px;font-weight:700;font-size:15px;
-    cursor:pointer;border:none;transition:transform .15s ease,box-shadow .15s ease;
+    cursor:pointer;border:none;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;
     white-space:nowrap;
   }
-  .btn-primary{background:var(--primary);color:#fff;box-shadow:0 6px 18px rgba(47,143,199,.28);}
-  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(47,143,199,.36);}
+  .btn-primary{background:var(--primary);color:#fff;box-shadow:0 6px 18px rgba(36,118,111,.24);}
+  .btn-primary:hover{background:var(--primary-hover);transform:translateY(-1px);box-shadow:0 8px 22px rgba(36,118,111,.32);}
   .btn-outline{background:#fff;color:var(--primary);border:1.5px solid var(--primary-200);}
   .btn-outline:hover{background:var(--primary-50);}
-  .btn-sm{padding:9px 18px;font-size:13px;}
+  .btn-sm{padding:11px 18px;font-size:13px;}
   .btn:focus-visible{outline:3px solid var(--primary-200);outline-offset:2px;}
 
   /* Hero */
@@ -141,14 +152,14 @@
   }
   .pain-item .dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:8px;}
   .pain-close{text-align:center;margin-top:32px;font-size:18px;color:var(--text);font-weight:700;max-width:560px;margin-left:auto;margin-right:auto;}
+  .pain-close.tight{margin-top:28px;}
 
   /* Causes */
   .cause-grid{display:grid;grid-template-columns:1fr;gap:12px;}
   @media (min-width:760px){.cause-grid{grid-template-columns:repeat(3,1fr);}}
   .cause-card{
     background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);
-    padding:18px 20px;box-shadow:var(--shadow);
-    display:flex;align-items:center;gap:14px;
+    padding:18px 20px;display:flex;align-items:center;gap:14px;
   }
   @media (min-width:760px){.cause-card{flex-direction:column;align-items:flex-start;gap:4px;}}
   .cause-card .n{
@@ -159,10 +170,11 @@
   .cause-card h3{font-size:16px;margin:0 0 4px;}
   .cause-card p{margin:0;font-size:14px;color:var(--muted);line-height:1.5;}
   .cause-card-body{min-width:0;}
-  .pain-close.tight{margin-top:28px;}
 
-  /* Diagnosis contents */
-  .diag-list{display:flex;flex-direction:column;gap:0;max-width:680px;margin:0 auto;}
+  /* Diagnosis: two-column (checklist + sample sheet) */
+  .diagnosis-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:start;}
+  @media (min-width:900px){.diagnosis-grid{grid-template-columns:1fr 1fr;}}
+  .diag-list{display:flex;flex-direction:column;gap:0;}
   .diag-item{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);align-items:flex-start;}
   .diag-item:last-child{border-bottom:none;}
   .diag-item .chk{
@@ -172,43 +184,100 @@
   .diag-item p{margin:0;font-size:17px;font-weight:700;}
   .cta-center{display:flex;justify-content:center;margin-top:36px;}
 
+  .diag-sample-wrap{display:flex;flex-direction:column;gap:14px;}
+  .diag-sheet{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md);
+    padding:24px 22px;box-shadow:var(--shadow);
+  }
+  .diag-sheet-head{
+    display:flex;flex-direction:column;gap:4px;
+    border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:14px;
+  }
+  @media (min-width:480px){
+    .diag-sheet-head{flex-direction:row;justify-content:space-between;align-items:flex-start;gap:12px;}
+  }
+  .diag-sheet-head h3{font-size:16px;margin:0;}
+  .diag-sheet-tag{font-size:11.5px;color:var(--muted);}
+  @media (min-width:480px){.diag-sheet-tag{white-space:nowrap;text-align:right;}}
+  .diag-sheet-lead{font-size:12.5px;font-weight:700;color:var(--primary-dark);letter-spacing:.03em;margin:0 0 6px;}
+  .diag-sheet-msg{font-size:15.5px;font-weight:700;margin:0 0 18px;}
+  .diag-sheet-rows{display:flex;flex-direction:column;}
+  .diag-sheet-row{padding:12px 0;border-top:1px solid var(--line);}
+  .diag-sheet-row:first-child{border-top:none;padding-top:0;}
+  .diag-sheet-row .rt{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:4px;flex-wrap:wrap;}
+  .diag-sheet-row .rt strong{font-size:14.5px;color:var(--text);}
+  .diag-sheet-row .rt span{
+    font-size:12px;font-weight:700;color:var(--primary-dark);background:var(--primary-100);
+    padding:3px 10px;border-radius:99px;white-space:nowrap;
+  }
+  .diag-sheet-row p{margin:0;font-size:13.5px;color:var(--muted);}
+  .diag-sheet-next{margin-top:14px;padding-top:16px;border-top:1px solid var(--line);}
+  .diag-sheet-next p.label{font-size:13px;font-weight:700;margin:0 0 8px;}
+  .diag-sheet-next ol{margin:0;padding-left:20px;font-size:13.5px;color:var(--muted);}
+  .diag-sheet-next li{margin-bottom:6px;}
+  .diag-sample-note{
+    font-size:14px;color:var(--muted);line-height:1.7;background:var(--bg-soft);
+    border-radius:var(--radius-sm);padding:14px 16px;
+  }
+
   /* Honest section */
   .honest{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .honest-card{
     background:var(--surface);border-left:4px solid var(--accent);border-radius:var(--radius-md);
-    padding:22px 22px;max-width:640px;margin:0 auto;box-shadow:var(--shadow);
+    padding:22px 22px;max-width:640px;box-shadow:none;
   }
   .honest-card > p{margin:0 0 12px;font-weight:700;font-size:15px;}
   .honest-card ul{margin:0;padding-left:20px;color:var(--muted);font-size:14.5px;}
   .honest-card li{margin-bottom:8px;}
   .honest-turn{
-    max-width:640px;margin:28px auto 0;background:var(--primary-dark);color:#fff;
-    border-radius:var(--radius-lg);padding:28px 26px;text-align:center;
+    max-width:640px;margin:28px 0 0;background:var(--primary-dark);color:#fff;
+    border-radius:var(--radius-lg);padding:28px 26px;
   }
   .honest-turn .big{font-size:23px;font-weight:800;margin-bottom:10px;}
   .honest-turn p.small{margin:0;font-size:14px;color:var(--primary-100);line-height:1.9;}
 
+  /* Case study: single flowing story, not a repeated card grid */
+  .case-story{max-width:760px;}
+  .case-story-lead{font-size:15.5px;color:var(--text);margin:0 0 30px;}
+  .case-timeline{
+    display:flex;flex-direction:column;gap:0;position:relative;
+    padding-left:24px;border-left:2px solid var(--primary-200);
+  }
+  .case-stage{position:relative;padding:0 0 30px 20px;}
+  .case-stage:last-child{padding-bottom:0;}
+  .case-stage::before{
+    content:"";position:absolute;left:-31px;top:3px;width:10px;height:10px;
+    border-radius:50%;background:var(--primary);
+  }
+  .case-stage h3{font-size:15px;color:var(--primary-dark);margin:0 0 6px;}
+  .case-stage p{margin:0 0 8px;font-size:14.5px;color:var(--text);}
+  .case-stage p:last-child{margin-bottom:0;}
+  .case-note{margin-top:30px;font-size:13.5px;color:var(--muted);background:var(--bg-soft);border-radius:var(--radius-sm);padding:14px 16px;}
+  .case-verified-note{margin-top:10px;font-size:13px;color:var(--muted);}
+
   /* Why AIKASU */
-  .why-wrap{display:grid;grid-template-columns:1fr;gap:36px;align-items:center;max-width:960px;margin:0 auto;}
+  .why-wrap{display:grid;grid-template-columns:1fr;gap:36px;align-items:center;max-width:960px;}
   @media (min-width:900px){.why-wrap{grid-template-columns:1.05fr 0.95fr;}}
   .why-body{font-size:15.5px;color:var(--text);}
   .why-body p{margin:0 0 16px;}
   .stats-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px;}
-  .why-photo{position:relative;max-width:420px;margin:0 auto;}
-  .why-photo img.main{width:100%;height:auto;border-radius:var(--radius-lg);box-shadow:var(--shadow);display:block;}
-  .why-photo img.accent{
-    position:absolute;width:38%;max-width:160px;height:auto;right:16px;bottom:-22px;
-    border-radius:var(--radius-md);border:4px solid var(--surface);box-shadow:var(--shadow);display:block;
-  }
-  .stat-tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md);padding:16px 20px;min-width:140px;box-shadow:var(--shadow);}
+  .why-photo{max-width:420px;}
+  .why-photo img{width:100%;height:auto;border-radius:var(--radius-lg);display:block;}
+  .stat-tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md);padding:16px 20px;min-width:140px;}
   .stat-tile .v{font-size:22px;font-weight:800;color:var(--primary-dark);}
   .stat-tile .l{font-size:12.5px;color:var(--muted);margin-top:2px;}
+
+  .staff-profile{display:flex;align-items:center;gap:14px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);}
+  .staff-profile img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none;}
+  .staff-profile .staff-name{font-size:14.5px;font-weight:700;margin:0;}
+  .staff-profile .staff-role{font-size:12.5px;color:var(--muted);margin:2px 0 0;}
+  .staff-profile .staff-desc{font-size:13px;color:var(--muted);margin:6px 0 0;}
 
   /* Flow */
   .flow-grid{display:grid;grid-template-columns:1fr;gap:14px;}
   @media (min-width:680px){.flow-grid{grid-template-columns:repeat(2,1fr);}}
   @media (min-width:1040px){.flow-grid{grid-template-columns:repeat(4,1fr);}}
-  .flow-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md);padding:20px 18px;box-shadow:var(--shadow);}
+  .flow-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md);padding:20px 18px;}
   .flow-item .step{font-size:12px;color:var(--primary);font-weight:800;margin-bottom:8px;}
   .flow-item h3{font-size:15px;margin-bottom:4px;}
   .flow-item p{font-size:13.5px;color:var(--muted);margin:0;}
@@ -216,13 +285,27 @@
   .flow-notes .item{font-size:13.5px;color:var(--muted);display:flex;gap:8px;align-items:flex-start;}
   .flow-notes .item::before{content:"✓";color:var(--primary);font-weight:800;flex:none;}
 
+  /* Application (real destination for every CTA) */
+  .application{
+    margin:36px auto 0;max-width:560px;border:1px solid var(--line);border-radius:var(--radius-md);
+    padding:28px 26px;background:var(--surface);text-align:center;
+  }
+  .application h3{font-size:16px;margin:0 0 6px;}
+  .application-configured p{font-size:14px;color:var(--muted);margin:0 0 18px;}
+  .application-pending{
+    font-size:14.5px;color:var(--text);background:var(--bg-soft);border:1px solid var(--primary-200);
+    border-radius:var(--radius-sm);padding:16px 18px;
+  }
+  .application-pending strong{display:block;font-size:15.5px;margin-bottom:6px;color:var(--primary-dark);}
+  .application-pending p{margin:0;font-size:13.5px;color:var(--muted);}
+
   /* FAQ */
   .faq-list{max-width:720px;margin:0 auto;}
   .faq-item{border-bottom:1px solid var(--line);}
   .faq-q{
     width:100%;text-align:left;background:none;border:none;padding:18px 4px;
     display:flex;justify-content:space-between;align-items:center;cursor:pointer;
-    font-size:15px;font-weight:700;color:var(--text);gap:16px;
+    font-size:15px;font-weight:700;color:var(--text);gap:16px;min-height:44px;
   }
   .faq-q:focus-visible{outline:3px solid var(--primary-200);outline-offset:2px;border-radius:6px;}
   .faq-q .plus{flex:none;color:var(--primary);font-size:20px;font-weight:400;transition:transform .2s ease;}
@@ -252,7 +335,6 @@
   .mobile-cta{
     position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;
     border-top:1px solid var(--line);padding:10px 16px;
-    box-shadow:0 -4px 16px rgba(0,0,0,.08);
     padding-bottom:calc(10px + env(safe-area-inset-bottom));
   }
   .mobile-cta .btn{width:100%;padding:13px;font-size:15px;}
@@ -275,7 +357,7 @@
       <a href="#diagnosis">診断でわかること</a>
       <a href="#faq">よくある質問</a>
     </nav>
-    <a href="#flow" class="btn btn-primary btn-sm" data-cta="header" data-cta-location="header">無料で書類を見てもらう</a>
+    <a href="#application" class="btn btn-primary btn-sm" data-cta="header" data-cta-location="header">無料で書類を見てもらう</a>
   </div>
 </header>
 
@@ -295,7 +377,7 @@
         <p>あなたの場合を具体的にお伝えします。</p>
       </div>
       <div class="hero-ctas">
-        <a href="#flow" class="btn btn-primary" data-cta="hero" data-cta-location="hero">無料で書類を見てもらう</a>
+        <a href="#application" class="btn btn-primary" data-cta="hero" data-cta-location="hero">無料で書類を見てもらう</a>
       </div>
       <p class="hero-assure">無理に求人へ応募させることはありません</p>
     </div>
@@ -309,7 +391,7 @@
 <section id="pains">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">よくある悩み</span>
+      <span class="kicker">よくある悩み</span>
       <h2 class="section-title">こんな状態になっていませんか？</h2>
     </div>
     <div class="pain-list">
@@ -325,8 +407,8 @@
 <!-- 3. Causes -->
 <section style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">原因の整理</span>
+    <div class="section-head left">
+      <span class="kicker">原因の整理</span>
       <h2 class="section-title">落ちる原因は、<br>書類の書き方だけではありません。</h2>
     </div>
     <div class="cause-grid">
@@ -356,22 +438,60 @@
   </div>
 </section>
 
-<!-- 4. What the diagnosis covers -->
+<!-- 4. What the diagnosis covers + sample -->
 <section id="diagnosis">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">診断で分かること</span>
+    <div class="section-head left">
+      <span class="kicker">診断で分かること</span>
       <h2 class="section-title">あなたの場合を、<br>一般論ではなく具体的にお伝えします。</h2>
     </div>
-    <div class="diag-list">
-      <div class="diag-item"><span class="chk">✓</span><p>書類を直せば通る可能性があるのか</p></div>
-      <div class="diag-item"><span class="chk">✓</span><p>受ける仕事を変えるべきなのか</p></div>
-      <div class="diag-item"><span class="chk">✓</span><p>希望条件を見直す必要があるのか</p></div>
-      <div class="diag-item"><span class="chk">✓</span><p>今の経歴なら、どんな仕事を狙うべきか</p></div>
-      <div class="diag-item"><span class="chk">✓</span><p>次の応募までに何を変えるべきか</p></div>
-    </div>
-    <div class="cta-center">
-      <a href="#flow" class="btn btn-primary" data-cta="middle" data-cta-location="middle">無料で書類を見てもらう</a>
+    <div class="diagnosis-grid">
+      <div>
+        <div class="diag-list">
+          <div class="diag-item"><span class="chk">✓</span><p>書類を直せば通る可能性があるのか</p></div>
+          <div class="diag-item"><span class="chk">✓</span><p>受ける仕事を変えるべきなのか</p></div>
+          <div class="diag-item"><span class="chk">✓</span><p>希望条件を見直す必要があるのか</p></div>
+          <div class="diag-item"><span class="chk">✓</span><p>今の経歴なら、どんな仕事を狙うべきか</p></div>
+          <div class="diag-item"><span class="chk">✓</span><p>次の応募までに何を変えるべきか</p></div>
+        </div>
+        <div class="cta-center">
+          <a href="#application" class="btn btn-primary" data-cta="diagnosis" data-cta-location="diagnosis">無料で書類を見てもらう</a>
+        </div>
+      </div>
+      <div class="diag-sample-wrap">
+        <span class="kicker">面談でお伝えする内容のイメージ</span>
+        <div class="diag-sheet">
+          <div class="diag-sheet-head">
+            <h3>書類診断結果</h3>
+            <span class="diag-sheet-tag">診断サンプル／個人情報は含まれていません</span>
+          </div>
+          <p class="diag-sheet-lead">今回、最初に見直すべきこと</p>
+          <p class="diag-sheet-msg">書類だけでなく、応募する職種の見直しが必要です。</p>
+          <div class="diag-sheet-rows">
+            <div class="diag-sheet-row">
+              <div class="rt"><strong>書類</strong><span>改善余地あり</span></div>
+              <p>経験が業務の羅列になっており、強みと成果が伝わりにくい状態です。</p>
+            </div>
+            <div class="diag-sheet-row">
+              <div class="rt"><strong>応募先</strong><span>見直しを推奨</span></div>
+              <p>希望職種の必須経験と、これまでの実務経験に差があります。</p>
+            </div>
+            <div class="diag-sheet-row">
+              <div class="rt"><strong>希望条件</strong><span>優先順位を整理</span></div>
+              <p>職種以外の譲れない条件を確認し、応募先の選択肢を整理します。</p>
+            </div>
+          </div>
+          <div class="diag-sheet-next">
+            <p class="label">次の応募までに変えること</p>
+            <ol>
+              <li>職務要約を「業務内容」ではなく「できること」から書き直す</li>
+              <li>これまでの経験が評価されやすい職種を追加する</li>
+              <li>職種・勤務地・働き方・年収のうち、譲れない条件を決める</li>
+            </ol>
+          </div>
+        </div>
+        <p class="diag-sample-note">この画面は、診断時にお伝えする内容のイメージです。書面での納品を約束するものではありません。また、不採用理由を断定するものではなく、採用側の視点から通りにくい要因を整理するものです。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -379,10 +499,10 @@
 <!-- 5. Honesty -->
 <section class="honest">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head left">
       <span class="eyebrow">正直に伝える姿勢</span>
       <h2 class="section-title">耳ざわりのいいことだけは<wbr>言いません。</h2>
-      <p class="section-lead">場合によっては、以下のようなことも正直にお伝えします。</p>
+      <p class="section-lead" style="margin:0;">場合によっては、以下のようなことも正直にお伝えします。</p>
     </div>
     <div class="honest-card">
       <p>お伝えすることがある内容の例</p>
@@ -394,17 +514,55 @@
       </ul>
     </div>
     <div class="honest-turn">
-      <div class="big">ただし、<br>「難しい」で終わらせません。</div>
+      <div class="big">ただし、<br>『難しい』で終わらせません。</div>
       <p class="small">何を変えるべきか。<br>どこなら可能性があるのか。<br>次に取るべき行動まで、一緒に整理します。</p>
     </div>
   </div>
 </section>
 
-<!-- 6. Why AIKASU -->
-<section>
+<!-- 6. Support image / case story -->
+<section id="case">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">AIKASUだから分かる理由</span>
+    <div class="section-head left">
+      <span class="eyebrow" id="case-label">支援イメージ</span>
+      <h2 class="section-title">「憧れの職種」を見直したことで、<br>ほかの希望条件を残せることがあります。</h2>
+    </div>
+    <div class="case-story">
+      <p class="case-story-lead">書類の書き方だけを直すことが、最善とは限りません。<br>例えば、次のように応募の方向を整理することがあります。</p>
+      <div class="case-timeline">
+        <div class="case-stage">
+          <h3>相談前</h3>
+          <p>以前から憧れていた職種を希望していましたが、応募しても書類選考を通過できない状態が続いていました。</p>
+        </div>
+        <div class="case-stage">
+          <h3>お伝えすること</h3>
+          <p>書類と経歴を確認すると、書き方だけでなく、希望職種で求められる実務経験との間に差がありました。</p>
+          <p>ご本人も薄々感じていた「憧れだけでは通りにくい」という点を、人格や経験を否定せず、理由とともに率直にお伝えします。</p>
+        </div>
+        <div class="case-stage">
+          <h3>見直すこと</h3>
+          <p>職種への憧れだけに固執せず、これまでの経験が評価されやすい職種へ応募先を広げます。</p>
+          <p>一方で、勤務地・働き方など、その他の譲れない条件は整理して残します。</p>
+        </div>
+        <div class="case-stage">
+          <h3>目指せる状態</h3>
+          <p>経験を評価されやすい職種を選ぶことで、その他の希望条件を満たす企業も選択肢に入れられる状態を目指します。</p>
+        </div>
+      </div>
+      <p class="case-note">これは診断後に考えられる選択肢を示した支援イメージです。転職や入社の結果を保証するものではありません。</p>
+      <p class="case-verified-note" id="case-verified-note" hidden>個人が特定されないよう一部編集しています。</p>
+      <div class="cta-center" style="justify-content:flex-start;">
+        <a href="#application" class="btn btn-primary" data-cta="case" data-cta-location="case">無料で書類を見てもらう</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Why AIKASU -->
+<section style="background:var(--bg-soft);">
+  <div class="wrap">
+    <div class="section-head left">
+      <span class="kicker">AIKASUだから分かる理由</span>
       <h2 class="section-title">求職者だけでなく、<br>採用する企業も支援しているからです。</h2>
     </div>
     <div class="why-wrap">
@@ -413,20 +571,27 @@
         <p>企業が書類のどこを見て、<br>「会ってみたい」<br>「今回は見送る」<br>と判断するのか。</p>
         <p>その採用側の視点から、あなたの書類を確認します。</p>
         <div class="stats-row" id="stats-row" hidden></div>
+        <div class="staff-profile" id="staff-profile" hidden>
+          <img class="staff-photo" src="" alt="">
+          <div>
+            <p class="staff-name"></p>
+            <p class="staff-role"></p>
+            <p class="staff-desc"></p>
+          </div>
+        </div>
       </div>
       <div class="why-photo">
-        <img class="main" src="assets/why-aikasu-photo.jpg" alt="採用担当者が書類を確認している様子(イメージ)" width="1100" height="733" loading="lazy">
-        <img class="accent" src="assets/why-aikasu-accent.jpg" alt="" width="480" height="600" loading="lazy" aria-hidden="true">
+        <img src="assets/why-aikasu-photo.jpg" alt="書類を確認している様子(イメージ)" width="1100" height="733" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
-<!-- 7. Flow -->
+<!-- 8. Flow + application -->
 <section id="flow" style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">利用の流れ</span>
+      <span class="kicker">利用の流れ</span>
       <h2 class="section-title">利用はかんたんです。</h2>
     </div>
     <div class="flow-grid">
@@ -440,54 +605,66 @@
       <div class="item">診断後に、必ず求人へ応募する必要はありません</div>
     </div>
     <div class="cta-center">
-      <a href="#flow" class="btn btn-primary" data-cta="flow" data-cta-location="flow">無料で書類を見てもらう</a>
+      <a href="#application" class="btn btn-primary" data-cta="flow" data-cta-location="flow">無料で書類を見てもらう</a>
+    </div>
+
+    <div class="application" id="application">
+      <div class="application-configured" id="application-configured" hidden>
+        <h3>無料で書類を見てもらう</h3>
+        <p>下のボタンから、実際の申込先へ移動します。</p>
+        <a href="#" class="btn btn-primary" data-cta="application" data-cta-location="flow">無料で書類を見てもらう</a>
+      </div>
+      <div class="application-pending" id="application-pending" hidden>
+        <strong>現在、申込先の設定準備中です</strong>
+        <p>申込先が決まり次第、このエリアから直接お申し込みいただけるようになります。今しばらくお待ちください。</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 8. FAQ -->
+<!-- 9. FAQ -->
 <section id="faq">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">よくある質問</span>
+      <span class="kicker">よくある質問</span>
       <h2 class="section-title">よくある質問</h2>
     </div>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q">本当に無料ですか？<span class="plus">+</span></button>
+        <button class="faq-q" type="button">本当に無料ですか？<span class="plus">+</span></button>
         <div class="faq-a"><p>書類診断に費用はかかりません。診断後に求人へ応募する場合も、求職者から紹介料金をいただくことはありません。</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">必ず求人に応募しないといけませんか？<span class="plus">+</span></button>
+        <button class="faq-q" type="button">必ず求人に応募しないといけませんか？<span class="plus">+</span></button>
         <div class="faq-a"><p>いいえ。診断結果を聞くだけでも問題ありません。無理に求人への応募を勧めることはありません。</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">厳しいことを言われませんか？<span class="plus">+</span></button>
+        <button class="faq-q" type="button">厳しいことを言われませんか？<span class="plus">+</span></button>
         <div class="faq-a"><p>現状は率直にお伝えしますが、人格やこれまでの経験を否定することはありません。次に何を変えればよいかまで一緒に整理します。</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">今の勤務先に知られませんか？<span class="plus">+</span></button>
+        <button class="faq-q" type="button">今の勤務先に知られませんか？<span class="plus">+</span></button>
         <div class="faq-a"><p>診断内容や転職活動について、現在の勤務先へ連絡することはありません。</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">個人情報はどのように扱われますか？<span class="plus">+</span></button>
-        <div class="faq-a"><p id="faq-privacy-text">お預かりした情報は、書類診断および希望された転職支援の目的でのみ利用します。詳細はプライバシーポリシーをご確認ください。</p></div>
+        <button class="faq-q" type="button">個人情報はどのように扱われますか？<span class="plus">+</span></button>
+        <div class="faq-a"><p id="faq-privacy-text">お預かりした情報は、書類診断および希望された転職支援の目的でのみ利用します。</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">紹介できる求人がない場合はどうなりますか？<span class="plus">+</span></button>
+        <button class="faq-q" type="button">紹介できる求人がない場合はどうなりますか？<span class="plus">+</span></button>
         <div class="faq-a"><p>ご希望と経歴を確認し、現時点で紹介が難しい場合はその旨を正直にお伝えします。その上で、条件の見直しや次に取るべき行動をご提案します。</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 9. Final CTA -->
+<!-- 10. Final CTA -->
 <section class="final">
   <div class="wrap">
-    <span class="eyebrow">最後にもう一度</span>
+    <span class="kicker">最後にもう一度</span>
     <h2 class="section-title">次も同じ書類を送る前に、<br>一度だけ、落ちる理由を確認しませんか？</h2>
     <div class="cta-center">
-      <a href="#flow" class="btn btn-primary" data-cta="final" data-cta-location="final">無料で書類を見てもらう</a>
+      <a href="#application" class="btn btn-primary" data-cta="final" data-cta-location="final">無料で書類を見てもらう</a>
     </div>
     <div class="final-assure">
       <span class="assure-chip">診断無料</span>
@@ -513,16 +690,28 @@
 </footer>
 
 <div class="mobile-cta">
-  <a href="#flow" class="btn btn-primary" data-cta="sticky" data-cta-location="sticky">無料で書類を見てもらう</a>
+  <a href="#application" class="btn btn-primary" data-cta="sticky" data-cta-location="sticky">無料で書類を見てもらう</a>
 </div>
 
 <script src="config.js"></script>
 <script>
+(function(){
+  var cfg = window.AIKASU_CONFIG || {};
+  var ctaUrl = (cfg.ctaUrl || '').trim();
+  var ctaConfigured = !!ctaUrl;
+
+  if (!ctaConfigured && window.console && window.console.warn) {
+    console.warn('[AIKASU LP] AIKASU_CONFIG.ctaUrl is not set. All CTAs will scroll to #application instead of navigating to a real application destination. Set ctaUrl in shorui-shindan/config.js before public launch.');
+  }
+
   // FAQ accordion
-  document.querySelectorAll('.faq-q').forEach(function(btn){
-    var item = btn.closest('.faq-item');
+  document.querySelectorAll('.faq-item').forEach(function(item, i){
+    var btn = item.querySelector('.faq-q');
     var answer = item.querySelector('.faq-a');
+    var id = 'faq-answer-' + (i + 1);
+    answer.id = id;
     btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-controls', id);
     btn.addEventListener('click', function(){
       var was = item.classList.contains('open');
       document.querySelectorAll('.faq-item.open').forEach(function(el){
@@ -538,13 +727,16 @@
     });
   });
 
-  // CTA links: apply configured URL (fallback stays as in-page anchor), track clicks
-  var ctaUrl = (window.AIKASU_CONFIG && window.AIKASU_CONFIG.ctaUrl) ? window.AIKASU_CONFIG.ctaUrl.trim() : '';
+  // CTA links: real destination if configured, otherwise #application (never a self-referencing loop)
   document.querySelectorAll('[data-cta]').forEach(function(el){
-    if (ctaUrl) {
+    if (ctaConfigured) {
       el.setAttribute('href', ctaUrl);
       el.setAttribute('target', '_blank');
       el.setAttribute('rel', 'noopener');
+    } else {
+      el.setAttribute('href', '#application');
+      el.removeAttribute('target');
+      el.removeAttribute('rel');
     }
     el.addEventListener('click', function(){
       var location = el.getAttribute('data-cta-location') || el.getAttribute('data-cta');
@@ -552,24 +744,38 @@
     });
   });
 
+  // Application block: show the real button only when a destination exists,
+  // otherwise show a plain, non-clickable "pending" notice.
+  var appConfigured = document.getElementById('application-configured');
+  var appPending = document.getElementById('application-pending');
+  if (appConfigured && appPending) {
+    if (ctaConfigured) {
+      appConfigured.hidden = false;
+      appPending.hidden = true;
+    } else {
+      appConfigured.hidden = true;
+      appPending.hidden = false;
+    }
+  }
+
   // Operational text from config (submission formats / result method)
-  if (window.AIKASU_CONFIG && window.AIKASU_CONFIG.operations) {
-    var ops = window.AIKASU_CONFIG.operations;
+  if (cfg.operations) {
+    var ops = cfg.operations;
     var formatsEls = [document.getElementById('flow-formats'), document.getElementById('flow-note-formats')];
     formatsEls.forEach(function(el){
-      if (el && ops.submissionFormats) { el.textContent = el.id === 'flow-formats' ? ops.submissionFormats + 'でも送付可能' : ops.submissionFormats + 'でも送付可能'; }
+      if (el && ops.submissionFormats) { el.textContent = ops.submissionFormats + 'でも送付可能'; }
     });
     var methodEl = document.getElementById('flow-method');
     if (methodEl && ops.resultMethod) { methodEl.textContent = ops.resultMethod + 'で診断結果をお伝えします'; }
   }
 
-  // Privacy policy link: only render if a real URL is configured (never fabricate one)
-  if (window.AIKASU_CONFIG && window.AIKASU_CONFIG.privacyPolicyUrl && window.AIKASU_CONFIG.privacyPolicyUrl.trim()) {
-    var url = window.AIKASU_CONFIG.privacyPolicyUrl.trim();
+  // Privacy policy: only ever show a link/mention when a real URL is configured
+  var privacyUrl = (cfg.privacyPolicyUrl || '').trim();
+  if (privacyUrl) {
     var footerNav = document.getElementById('footer-links');
     if (footerNav) {
       var a = document.createElement('a');
-      a.href = url;
+      a.href = privacyUrl;
       a.textContent = 'プライバシーポリシー';
       a.target = '_blank';
       a.rel = 'noopener';
@@ -577,32 +783,63 @@
     }
     var privacyText = document.getElementById('faq-privacy-text');
     if (privacyText) {
+      privacyText.textContent = '';
+      privacyText.appendChild(document.createTextNode('お預かりした情報は、書類診断および希望された転職支援の目的でのみ利用します。詳細は'));
       var link = document.createElement('a');
-      link.href = url;
+      link.href = privacyUrl;
       link.textContent = 'プライバシーポリシー';
       link.target = '_blank';
       link.rel = 'noopener';
       link.style.color = 'var(--primary)';
       link.style.fontWeight = '700';
-      privacyText.innerHTML = 'お預かりした情報は、書類診断および希望された転職支援の目的でのみ利用します。詳細は';
       privacyText.appendChild(link);
       privacyText.appendChild(document.createTextNode('をご確認ください。'));
     }
   }
 
-  // Stats / testimonials: only render when data has been supplied in config.js
-  if (window.AIKASU_CONFIG && Array.isArray(window.AIKASU_CONFIG.stats) && window.AIKASU_CONFIG.stats.length) {
-    var row = document.getElementById('stats-row');
-    window.AIKASU_CONFIG.stats.forEach(function(s){
-      var tile = document.createElement('div');
-      tile.className = 'stat-tile';
-      tile.innerHTML = '<div class="v"></div><div class="l"></div>';
-      tile.querySelector('.v').textContent = s.value || '';
-      tile.querySelector('.l').textContent = s.label || '';
-      row.appendChild(tile);
-    });
-    row.hidden = false;
+  // Case study status: "illustrative" (default, safe) vs "verified" (only once real data exists)
+  var caseStatus = (cfg.caseStudy && cfg.caseStudy.status) || 'illustrative';
+  var caseLabelEl = document.getElementById('case-label');
+  var caseVerifiedNote = document.getElementById('case-verified-note');
+  if (caseLabelEl) {
+    caseLabelEl.textContent = caseStatus === 'verified' ? '確認済み事例' : '支援イメージ';
   }
+  if (caseVerifiedNote) {
+    caseVerifiedNote.hidden = caseStatus !== 'verified';
+  }
+
+  // Staff profile: only render when explicitly enabled with a real name
+  var staff = cfg.staffProfile;
+  var staffEl = document.getElementById('staff-profile');
+  if (staff && staff.enabled && staff.name && staffEl) {
+    var imgEl = staffEl.querySelector('.staff-photo');
+    var nameEl = staffEl.querySelector('.staff-name');
+    var roleEl = staffEl.querySelector('.staff-role');
+    var descEl = staffEl.querySelector('.staff-desc');
+    if (imgEl && staff.image) { imgEl.src = staff.image; imgEl.alt = staff.name; }
+    if (nameEl) { nameEl.textContent = staff.name; }
+    if (roleEl) { roleEl.textContent = staff.role || ''; }
+    if (descEl) { descEl.textContent = staff.description || ''; }
+    staffEl.hidden = false;
+  }
+
+  // Stats: only render when data has been supplied in config.js (never fabricated placeholders)
+  if (Array.isArray(cfg.stats) && cfg.stats.length) {
+    var row = document.getElementById('stats-row');
+    if (row) {
+      cfg.stats.forEach(function(s){
+        var tile = document.createElement('div');
+        tile.className = 'stat-tile';
+        var v = document.createElement('div'); v.className = 'v'; v.textContent = s.value || '';
+        var l = document.createElement('div'); l.className = 'l'; l.textContent = s.label || '';
+        tile.appendChild(v);
+        tile.appendChild(l);
+        row.appendChild(tile);
+      });
+      row.hidden = false;
+    }
+  }
+})();
 </script>
 
 </body>
