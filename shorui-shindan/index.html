@@ -89,7 +89,12 @@
     display:block;font-size:13px;font-weight:700;color:var(--badge);
     letter-spacing:.04em;margin-bottom:10px;
   }
-  .section-title{font-size:clamp(21px,3.2vw,30px);font-weight:800;margin-bottom:14px;}
+  .section-title{font-size:clamp(19px,3.2vw,30px);font-weight:800;margin-bottom:14px;}
+  /* Some headings/paragraphs have a line break meant for wider screens; on mobile it
+     forces an extra wrap that strands one or two characters alone on their own line,
+     so it's suppressed below 960px and the text flows and wraps naturally instead. */
+  .br-desktop{display:none;}
+  @media (min-width:960px){.br-desktop{display:block;}}
   .section-lead{color:var(--muted);font-size:16px;max-width:600px;margin:0 auto;}
   .section-head{text-align:center;margin-bottom:40px;}
   .section-head.left{text-align:left;margin-left:0;}
@@ -255,6 +260,10 @@
   /* Case study: single flowing story, not a repeated card grid */
   .case-story{max-width:680px;}
   .case-story-lead{font-size:15.5px;color:var(--text);margin:0 0 30px;}
+  @media (max-width:959px){
+    #case .section-title{font-size:17.5px;}
+    .case-story-lead{font-size:14.5px;}
+  }
   .case-timeline{
     display:flex;flex-direction:column;gap:0;position:relative;
     padding-left:24px;border-left:2px solid var(--badge-line);
@@ -277,8 +286,16 @@
   .why-body{font-size:15.5px;color:var(--text);}
   .why-body p{margin:0 0 16px;}
   .stats-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px;}
-  .why-photo{max-width:420px;}
+  /* On mobile this photo is shown inside the case-study section instead (see .case-photo);
+     it only appears in its original spot here once the two-column layout kicks in. */
+  .why-photo{max-width:420px;display:none;}
   .why-photo img{width:100%;height:auto;border-radius:var(--radius-lg);display:block;}
+  @media (min-width:900px){.why-photo{display:block;}}
+
+  /* Mobile-only placement of the same photo, between the case-study heading and its story */
+  .case-photo{margin:24px 0 0;max-width:480px;}
+  .case-photo img{width:100%;height:auto;border-radius:var(--radius-lg);display:block;}
+  @media (min-width:900px){.case-photo{display:none;}}
   .stat-tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md);padding:16px 20px;min-width:140px;}
   .stat-tile .v{font-size:22px;font-weight:800;color:var(--heading);}
   .stat-tile .l{font-size:12.5px;color:var(--muted);margin-top:2px;}
@@ -556,10 +573,13 @@
   <div class="wrap">
     <div class="section-head left">
       <span class="eyebrow" id="case-label">支援イメージ</span>
-      <h2 class="section-title">「憧れの職種」を見直したことで、<br>ほかの希望条件を残せることがあります。</h2>
+      <h2 class="section-title">「憧れの職種」を見直したことで、<br class="br-desktop">ほかの希望条件を残せることがあります。</h2>
+    </div>
+    <div class="case-photo">
+      <img src="assets/why-aikasu-photo.jpg" alt="書類を確認している様子(イメージ)" width="1100" height="733" loading="lazy">
     </div>
     <div class="case-story">
-      <p class="case-story-lead">書類の書き方だけを直すことが、最善とは限りません。<br>例えば、次のように応募の方向を整理することがあります。</p>
+      <p class="case-story-lead">書類の書き方だけを直すことが、最善とは限りません。<br class="br-desktop">例えば、次のように応募の方向を整理することがあります。</p>
       <div class="case-timeline">
         <div class="case-stage">
           <h3>相談前</h3>
