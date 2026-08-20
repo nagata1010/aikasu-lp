@@ -394,9 +394,35 @@
   body{padding-bottom:78px;}
   @media (min-width:900px){body{padding-bottom:0;}}
 
+  /* Time-delayed popup CTA */
+  .popup-overlay{
+    position:fixed;inset:0;z-index:100;background:rgba(21,33,58,.55);
+    display:flex;align-items:center;justify-content:center;padding:20px;
+  }
+  .popup-overlay[hidden]{display:none;}
+  .popup-card{
+    position:relative;background:var(--surface);border-radius:var(--radius-lg);
+    padding:34px 26px 28px;max-width:380px;width:100%;box-shadow:0 20px 50px rgba(21,33,58,.32);
+    text-align:center;animation:popup-in .25s ease;
+  }
+  @keyframes popup-in{from{opacity:0;transform:translateY(12px) scale(.97);}to{opacity:1;transform:none;}}
+  .popup-close{
+    position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:50%;
+    border:none;background:var(--bg-soft);color:var(--muted);font-size:22px;line-height:1;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;
+  }
+  .popup-close:hover{background:var(--badge-soft);color:var(--badge);}
+  .popup-close:focus-visible{outline:3px solid var(--badge-line);outline-offset:2px;}
+  .popup-title{font-size:19px;margin:6px 0 10px;}
+  .popup-text{font-size:14.5px;color:var(--muted);margin:0 0 20px;}
+  .popup-cta{width:100%;}
+  .popup-assure{margin-top:12px;font-size:12.5px;color:var(--muted);}
+  .popup-assure::before{content:"✓ ";color:var(--primary);font-weight:800;}
+
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
     *{transition:none !important;}
+    .popup-card{animation:none;}
   }
 </style>
 </head>
@@ -664,10 +690,6 @@
       <div class="item" id="flow-note-formats">PDF・写真・スクリーンショットでも送付可能</div>
       <div class="item">診断後に、必ず求人へ応募する必要はありません</div>
     </div>
-    <div class="cta-center">
-      <a href="#application" class="btn btn-primary" data-cta="flow" data-cta-location="flow">無料で書類を見てもらう</a>
-    </div>
-
     <div class="application" id="application">
       <div class="application-configured" id="application-configured" hidden>
         <h3>無料で書類を見てもらう</h3>
@@ -753,6 +775,16 @@
   <a href="#application" class="btn btn-primary" data-cta="sticky" data-cta-location="sticky">無料で書類を見てもらう</a>
 </div>
 
+<div class="popup-overlay" id="popup-overlay" hidden>
+  <div class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+    <button type="button" class="popup-close" id="popup-close" aria-label="閉じる">&times;</button>
+    <h2 id="popup-title" class="popup-title">無料で書類を見てもらいませんか？</h2>
+    <p class="popup-text">履歴書・職務経歴書を、採用する側の目で無料診断します。</p>
+    <a href="#application" class="btn btn-primary popup-cta" data-cta="popup" data-cta-location="popup">無料で書類を見てもらう</a>
+    <p class="popup-assure">無理に求人へ応募させることはありません</p>
+  </div>
+</div>
+
 <script src="config.js"></script>
 <script>
 (function(){
@@ -778,6 +810,41 @@
       videoFacade.replaceWith(iframe);
     });
   }
+
+  // Time-delayed popup CTA: appears once per session after 5s on the page,
+  // never if the visitor already clicked a CTA, and is easy to dismiss (X, backdrop, Esc).
+  (function(){
+    var popup = document.getElementById('popup-overlay');
+    var closeBtn = document.getElementById('popup-close');
+    if (!popup || !closeBtn) { return; }
+    var STORAGE_KEY = 'aikasu_popup_shown';
+    var ctaClicked = false;
+    document.querySelectorAll('[data-cta]').forEach(function(el){
+      el.addEventListener('click', function(){ ctaClicked = true; });
+    });
+
+    function alreadyShown(){
+      try { return sessionStorage.getItem(STORAGE_KEY) === '1'; }
+      catch (e) { return false; }
+    }
+    function markShown(){
+      try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+    }
+    function hidePopup(){ popup.hidden = true; }
+    function showPopup(){
+      if (alreadyShown() || ctaClicked) { return; }
+      popup.hidden = false;
+      markShown();
+      closeBtn.focus();
+    }
+
+    setTimeout(showPopup, 5000);
+    closeBtn.addEventListener('click', hidePopup);
+    popup.addEventListener('click', function(e){ if (e.target === popup) { hidePopup(); } });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !popup.hidden) { hidePopup(); } });
+    var popupCta = popup.querySelector('[data-cta="popup"]');
+    if (popupCta) { popupCta.addEventListener('click', hidePopup); }
+  })();
 
   // FAQ accordion
   document.querySelectorAll('.faq-item').forEach(function(item, i){
